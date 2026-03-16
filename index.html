@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>股票模拟盘总控页</title>
+  <script src="dashboard-data.js"></script>
+  <style>
+    :root{--bg:#f5f7fb;--card:#fff;--text:#172033;--muted:#667085;--line:#e6ebf2;--primary:#1d4ed8;--accent:#4f46e5;--green:#16a34a;--red:#dc2626;--amber:#f59e0b;--shadow:0 10px 28px rgba(0,0,0,.06)}
+    *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#f8fbff,#f4f7fb);font-family:"Microsoft YaHei","PingFang SC",Arial,sans-serif;color:var(--text)}
+    .wrap{max-width:1380px;margin:0 auto;padding:24px}.topbar{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;flex-wrap:wrap;margin-bottom:18px}
+    h1{margin:0;font-size:32px}.sub{margin-top:8px;color:var(--muted);line-height:1.55}.hint{font-size:12px;color:var(--muted)}
+    .tabs,.mini-tabs{display:flex;gap:10px;flex-wrap:wrap}.tab{padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;font-weight:800;cursor:pointer}.tab.active{background:#e8efff;border-color:#c7d2fe;color:var(--primary)}
+    .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;margin-bottom:18px}.hero-main,.card,.stat{background:var(--card);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow)}
+    .hero-main{padding:22px;background:linear-gradient(135deg,#1e293b,#334155 55%,#4338ca);color:#fff}.eyebrow{font-size:13px;opacity:.82}.big{font-size:40px;font-weight:900;margin-top:8px}
+    .hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.hero-mini{padding:14px;border-radius:16px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16)}.hero-mini .k{font-size:12px;opacity:.8}.hero-mini .v{font-size:20px;font-weight:800;margin-top:6px}
+    .card{padding:18px}.section-title{margin:0 0 12px;font-size:18px}.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-bottom:18px}.stat{padding:16px}.label{font-size:12px;color:var(--muted)}.value{margin-top:8px;font-size:26px;font-weight:900}.up{color:var(--green)}.down{color:var(--red)}
+    .layout{display:grid;grid-template-columns:360px 1fr;gap:18px}.stack{display:grid;gap:18px}.line-list{display:grid;gap:10px}.line-item{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fbfcfe}.name{font-weight:700}.meta{font-size:12px;color:var(--muted);margin-top:4px}.amount{font-weight:900;white-space:nowrap}
+    .alert{padding:12px 14px;border-radius:14px;border:1px solid #fde68a;background:#fffbeb}.alert.warn{border-color:#fdba74;background:#fff7ed}.alert.info{border-color:#bfdbfe;background:#eff6ff}.alert + .alert{margin-top:10px}
+    .alloc-row{display:flex;align-items:center;gap:12px;padding:10px 0}.bar-wrap{height:10px;background:#eef2f7;border-radius:999px;overflow:hidden;flex:1}.bar{height:100%;background:linear-gradient(90deg,var(--primary),var(--accent))}
+    .curve{display:flex;align-items:flex-end;gap:10px;height:180px;padding-top:6px}.curve-col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:8px}.curve-bar{width:100%;max-width:70px;border-radius:12px 12px 0 0;background:linear-gradient(180deg,#60a5fa,#2563eb)}.curve-label{font-size:12px;color:var(--muted)}.curve-value{font-size:12px;font-weight:800}
+    .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px} table{width:100%;border-collapse:collapse;background:#fff;font-size:14px} th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top} th{background:#f8fafc;color:var(--muted);font-weight:800;position:sticky;top:0}.note{min-width:280px;line-height:1.45}
+    .report-list{display:grid;gap:10px}.report-item{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fbfcfe}.report-item a{color:var(--primary);font-weight:800;text-decoration:none}.report-item a:hover{text-decoration:underline}
+    @media (max-width:1120px){.hero,.layout{grid-template-columns:1fr}.stats{grid-template-columns:repeat(3,1fr)}} @media (max-width:760px){.wrap{padding:16px}.stats{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}.big{font-size:32px}.curve{height:140px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div>
+        <h1>股票模拟盘总控页</h1>
+        <div class="sub">我已经把它往真正的交易后台推进：概览、持仓、操作、日报、收益曲线、历史快照、盈亏拆分、风险提醒，都放进来。</div>
+      </div>
+      <div class="tabs" id="marketTabs">
+        <div class="tab active" data-market="aShare" onclick="setMarket('aShare')">A股</div>
+        <div class="tab" data-market="us" onclick="setMarket('us')">美股</div>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="hero-main">
+        <div class="eyebrow" id="heroLabel">A股模拟盘</div>
+        <div class="big" id="heroAssets">-</div>
+        <div class="hero-grid">
+          <div class="hero-mini"><div class="k">可用现金</div><div class="v" id="heroCash">-</div></div>
+          <div class="hero-mini"><div class="k">持仓市值</div><div class="v" id="heroPositionValue">-</div></div>
+          <div class="hero-mini"><div class="k">最新估值 / 更新时间</div><div class="v" id="heroTime">-</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h2 class="section-title">显示内容</h2>
+        <div class="mini-tabs" id="contentTabs">
+          <div class="tab active" data-view="overview" onclick="setView('overview')">概览</div>
+          <div class="tab" data-view="trades" onclick="setView('trades')">操作记录</div>
+          <div class="tab" data-view="reports" onclick="setView('reports')">日报历史</div>
+          <div class="tab" data-view="history" onclick="setView('history')">历史快照</div>
+        </div>
+        <div class="hint" style="margin-top:14px">新增模块：收益曲线、每日历史快照表、已实现/未实现盈亏、持仓占比、风险提醒。</div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="label">总资产</div><div class="value" id="totalAssets">-</div></div>
+      <div class="stat"><div class="label">可用现金</div><div class="value" id="cash">-</div></div>
+      <div class="stat"><div class="label">现金比例</div><div class="value" id="cashRatio">-</div></div>
+      <div class="stat"><div class="label">持仓比例</div><div class="value" id="positionRatio">-</div></div>
+      <div class="stat"><div class="label">累计盈亏</div><div class="value" id="pnl">-</div></div>
+      <div class="stat"><div class="label">累计收益率</div><div class="value" id="pnlRate">-</div></div>
+    </div>
+
+    <div class="layout">
+      <div class="stack">
+        <div class="card">
+          <h2 class="section-title">风险提醒</h2>
+          <div id="riskList"></div>
+        </div>
+        <div class="card">
+          <h2 class="section-title">盈亏拆分</h2>
+          <div class="line-list" id="pnlBreakdown"></div>
+        </div>
+        <div class="card">
+          <h2 class="section-title">持仓占比</h2>
+          <div id="allocationList"></div>
+        </div>
+      </div>
+
+      <div class="stack">
+        <div class="card" id="overviewPanel">
+          <h2 class="section-title">收益曲线（快照）</h2>
+          <div class="curve" id="curve"></div>
+          <div class="hint" style="margin-top:10px">先按历史快照画简版曲线，后面可以继续升级成真实折线图。</div>
+        </div>
+        <div class="card" id="tradesPanel" style="display:none">
+          <h2 class="section-title">操作记录</h2>
+          <div class="table-wrap"><table><thead><tr><th>日期</th><th>动作</th><th>代码</th><th>名称</th><th>价格</th><th>数量</th><th>金额</th><th>现金后</th><th>仓位后</th><th>理由</th></tr></thead><tbody id="tradesTable"></tbody></table></div>
+        </div>
+        <div class="card" id="reportsPanel" style="display:none">
+          <h2 class="section-title">日报历史</h2>
+          <div class="report-list" id="reportsHistory"></div>
+        </div>
+        <div class="card" id="historyPanel" style="display:none">
+          <h2 class="section-title">每日历史快照表</h2>
+          <div class="table-wrap"><table><thead><tr><th>日期</th><th>总资产</th><th>现金</th><th>持仓市值</th><th>单日涨跌额</th><th>单日涨跌幅</th><th>累计盈亏</th><th>累计收益率</th></tr></thead><tbody id="historyTable"></tbody></table></div>
+        </div>
+        <div class="card">
+          <h2 class="section-title">当前持仓</h2>
+          <div class="line-list" id="holdingsList"></div>
+        </div>
+        <div class="card">
+          <h2 class="section-title">日报文件</h2>
+          <div class="report-list" id="reportLinks"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script>
+let currentMarket='aShare'; let currentView='overview'; const data=window.__TRADING_DASHBOARD__||{markets:{}};
+function market(){return data.markets[currentMarket]||{};} function setActive(selector,key,value){document.querySelectorAll(selector).forEach(el=>el.classList.toggle('active',el.dataset[key]===value));}
+function setMarket(m){currentMarket=m;setActive('#marketTabs .tab','market',m);render();} function setView(v){currentView=v;setActive('#contentTabs .tab','view',v);render();}
+function applySignClass(el,text){el.classList.remove('up','down'); if(/^\+/.test(text)) el.classList.add('up'); if(/^-/.test(text)) el.classList.add('down');}
+function fmtMoney(v, prefix=''){ const n = Number(v||0); return prefix + n.toFixed(2); }
+function render(){
+  const m=market(), p=m.portfolio||{};
+  document.getElementById('heroLabel').textContent=`${m.label||''}模拟盘`; document.getElementById('heroAssets').textContent=p.totalAssets||'-'; document.getElementById('heroCash').textContent=p.cash||'-'; document.getElementById('heroPositionValue').textContent=p.positionValue||'-'; document.getElementById('heroTime').textContent=p.latestTime||'按文件更新';
+  document.getElementById('totalAssets').textContent=p.totalAssets||'-'; document.getElementById('cash').textContent=p.cash||'-'; document.getElementById('cashRatio').textContent=p.cashRatio||'-'; document.getElementById('positionRatio').textContent=p.positionRatio||'-'; document.getElementById('pnl').textContent=p.pnl||'-'; document.getElementById('pnlRate').textContent=p.pnlRate||'-';
+  applySignClass(document.getElementById('pnl'),p.pnl||''); applySignClass(document.getElementById('pnlRate'),p.pnlRate||'');
+
+  const riskAlerts=m.riskAlerts||[]; document.getElementById('riskList').innerHTML=riskAlerts.length?riskAlerts.map(r=>`<div class="alert ${r.level||'info'}">${r.text}</div>`).join(''):'<div class="hint">当前没有显著风险提醒。</div>';
+  const pb=m.pnlBreakdown||{}; document.getElementById('pnlBreakdown').innerHTML=[['已实现盈亏',pb.realized],['未实现盈亏',pb.unrealized]].map(([k,v])=>`<div class="line-item"><div class="name">${k}</div><div class="amount ${Number(v)>=0?'up':'down'}">${Number(v)>=0?'+':''}${Number(v||0).toFixed(2)}</div></div>`).join('');
+  const alloc=m.allocation||[]; const maxAlloc=Math.max(1,...alloc.map(a=>a.value||0)); document.getElementById('allocationList').innerHTML=alloc.length?alloc.map(a=>`<div class="alloc-row"><div style="width:120px;font-weight:700">${a.label}</div><div class="bar-wrap"><div class="bar" style="width:${Math.max(6,(a.value/maxAlloc)*100)}%"></div></div><div class="amount">${a.value.toFixed(2)}%</div></div>`).join(''):'<div class="hint">暂无占比数据</div>';
+
+  const snaps=m.snapshots||[]; const maxAsset=Math.max(1,...snaps.map(s=>Number(String(s.totalAssets).replace(/[^0-9.]/g,'')))); document.getElementById('curve').innerHTML=snaps.length?snaps.map(s=>{ const val=Number(String(s.totalAssets).replace(/[^0-9.]/g,'')); const h=Math.max(16,(val/maxAsset)*150); return `<div class="curve-col"><div class="curve-value">${s.totalAssets}</div><div class="curve-bar" style="height:${h}px"></div><div class="curve-label">${s.date}</div></div>`; }).join(''):'<div class="hint">暂无曲线数据</div>';
+  document.getElementById('historyTable').innerHTML=snaps.length?snaps.slice().reverse().map(s=>`<tr><td>${s.date}</td><td>${s.totalAssets}</td><td>${s.cash}</td><td>${s.positionValue}</td><td class="${String(s.dayPnl).startsWith('-')?'down':'up'}">${s.dayPnl}</td><td class="${String(s.dayPnlRate).startsWith('-')?'down':'up'}">${s.dayPnlRate}</td><td class="${String(s.cumPnl).startsWith('-')?'down':'up'}">${s.cumPnl}</td><td class="${String(s.cumPnlRate).startsWith('-')?'down':'up'}">${s.cumPnlRate}</td></tr>`).join(''):'<tr><td colspan="8">暂无历史快照</td></tr>';
+
+  const trades=m.trades||[]; document.getElementById('tradesTable').innerHTML=trades.length?trades.slice().reverse().map(t=>`<tr><td>${t.date||'-'}</td><td>${t.action||'-'}</td><td>${t.ticker||'-'}</td><td>${t.name||'-'}</td><td>${t.price||'-'}</td><td>${t.shares||'-'}</td><td>${t.amount||'-'}</td><td>${t.cash_after||'-'}</td><td>${t.position_ratio_after||'-'}</td><td class="note">${t.reason||'-'}</td></tr>`).join(''):'<tr><td colspan="10">暂无操作记录</td></tr>';
+  const reports=m.reports||[]; const reportHtml=reports.length?reports.map(r=>`<div class="report-item"><div><a href="${r.path}" target="_blank">${r.name}</a><div class="hint">${r.updatedAt||''}</div></div></div>`).join(''):'<div class="hint">暂无日报文件</div>';
+  document.getElementById('reportLinks').innerHTML=reportHtml; document.getElementById('reportsHistory').innerHTML=reportHtml;
+  document.getElementById('holdingsList').innerHTML=(p.holdings||[]).length?(p.holdings||[]).map(h=>`<div class="line-item"><div class="name">${h}</div></div>`).join(''):'<div class="hint">暂无持仓</div>';
+
+  document.getElementById('overviewPanel').style.display=currentView==='overview'?'':'none'; document.getElementById('tradesPanel').style.display=currentView==='trades'?'':'none'; document.getElementById('reportsPanel').style.display=currentView==='reports'?'':'none'; document.getElementById('historyPanel').style.display=currentView==='history'?'':'none';
+}
+render();
+</script>
+</body>
+</html>
