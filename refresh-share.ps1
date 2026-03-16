@@ -28,5 +28,21 @@ Get-ChildItem $tradingDir -Filter '*daily-report-*.pdf' | ForEach-Object {
   Copy-Item $_.FullName (Join-Path $reportsDir $_.Name) -Force
 }
 
-Write-Output 'share refresh done'
-Write-Output $shareApp
+# 5) 自动提交并推送到 GitHub（如果有变更）
+Push-Location $shareApp
+try {
+  git add . | Out-Null
+  $status = git status --porcelain
+  if ($status) {
+    $stamp = Get-Date -Format 'yyyy-MM-dd HH:mm:ss'
+    git commit -m "Auto refresh share site $stamp" | Out-Null
+    git push origin main | Out-Null
+    Write-Output 'share refresh done + pushed'
+  } else {
+    Write-Output 'share refresh done (no changes)'
+  }
+  Write-Output $shareApp
+}
+finally {
+  Pop-Location
+}
