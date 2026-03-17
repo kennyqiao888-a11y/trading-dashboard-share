@@ -1,5 +1,5 @@
 window.__TRADING_DASHBOARD__ = {
-  "updatedAt": "2026-03-17, 16:59:48",
+  "updatedAt": "2026-03-17, 17:05:53",
   "markets": {
     "aShare": {
       "label": "A股",
