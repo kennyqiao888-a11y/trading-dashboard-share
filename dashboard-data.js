@@ -1,5 +1,5 @@
 window.__TRADING_DASHBOARD__ = {
-  "updatedAt": "2026-03-17, 08:42:34",
+  "updatedAt": "2026-03-17, 16:54:50",
   "markets": {
     "aShare": {
       "label": "A股",
@@ -197,18 +197,18 @@ window.__TRADING_DASHBOARD__ = {
       "label": "美股",
       "portfolio": {
         "market": "美股",
-        "latestTime": "2026-03-16 收盘（最终版）",
-        "totalAssets": "$9,993.48",
+        "latestTime": "2026-03-17 收盘（最终版）",
+        "totalAssets": "$10,026.83",
         "cash": "$1,929.73",
-        "positionValue": "$8,063.75",
-        "cashRatio": "19.31%",
-        "positionRatio": "80.69%",
-        "pnl": "-$6.52",
-        "pnlRate": "-0.07%",
+        "positionValue": "$8,097.10",
+        "cashRatio": "19.25%",
+        "positionRatio": "80.75%",
+        "pnl": "+$26.83",
+        "pnlRate": "+0.27%",
         "holdings": [
-          "NVDA NVIDIA：15 股，成本价 $182.34，现价 $185.38，持仓市值 $2,780.70，占比 27.82%，浮盈亏 +$45.60",
-          "AAPL Apple：15 股，成本价 $254.64，现价 $250.95，持仓市值 $3,764.25，占比 37.67%，浮盈亏 -$55.35",
-          "GOOGL Alphabet：5 股，成本价 $302.56，现价 $303.76，持仓市值 $1,518.80，占比 15.20%，浮盈亏 +$6.00"
+          "NVDA NVIDIA：15 股，成本价 $182.34，现价 $181.97，持仓市值 $2,729.55，占比 27.22%，浮盈亏 -$5.55",
+          "AAPL Apple：15 股，成本价 $254.64，现价 $254.28，持仓市值 $3,814.20，占比 38.04%，浮盈亏 -$5.45",
+          "GOOGL Alphabet：5 股，成本价 $302.56，现价 $310.67，持仓市值 $1,553.35，占比 15.49%，浮盈亏 +$40.55"
         ]
       },
       "stats": {
@@ -304,6 +304,11 @@ window.__TRADING_DASHBOARD__ = {
       ],
       "reports": [
         {
+          "name": "us-daily-report-2026-03-17-final.pdf",
+          "path": "reports/us-daily-report-2026-03-17-final.pdf",
+          "updatedAt": "2026-03-17, 16:12:57"
+        },
+        {
           "name": "us-daily-report-2026-03-16-final.pdf",
           "path": "reports/us-daily-report-2026-03-16-final.pdf",
           "updatedAt": "2026-03-16, 17:05:59"
@@ -363,29 +368,29 @@ window.__TRADING_DASHBOARD__ = {
       "allocation": [
         {
           "label": "NVDA NVIDIA",
-          "value": 27.82
+          "value": 27.22
         },
         {
           "label": "AAPL Apple",
-          "value": 37.67
+          "value": 38.04
         },
         {
           "label": "GOOGL Alphabet",
-          "value": 15.2
+          "value": 15.49
         },
         {
           "label": "现金",
-          "value": 19.31
+          "value": 19.25
         }
       ],
       "riskAlerts": [
         {
           "level": "warn",
-          "text": "现金比例偏低（19.31%），机动空间变窄。"
+          "text": "现金比例偏低（19.25%），机动空间变窄。"
         },
         {
           "level": "warn",
-          "text": "单票仓位偏高：AAPL Apple 占比 37.67%。"
+          "text": "单票仓位偏高：AAPL Apple 占比 38.04%。"
         }
       ]
     }
