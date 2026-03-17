@@ -1,5 +1,5 @@
 window.__TRADING_DASHBOARD__ = {
-  "updatedAt": "2026-03-17, 16:54:50",
+  "updatedAt": "2026-03-17, 16:59:48",
   "markets": {
     "aShare": {
       "label": "A股",
@@ -163,6 +163,16 @@ window.__TRADING_DASHBOARD__ = {
           "dayPnlRate": "+1.61%",
           "cumPnl": "+¥15,813",
           "cumPnlRate": "+1.58%"
+        },
+        {
+          "date": "2026-03-17",
+          "totalAssets": "¥1,014,600",
+          "cash": "¥357,556",
+          "positionValue": "¥657,044",
+          "dayPnl": "-¥1,213",
+          "dayPnlRate": "-0.12%",
+          "cumPnl": "+¥14,600",
+          "cumPnlRate": "+1.46%"
         }
       ],
       "pnlBreakdown": {
@@ -359,6 +369,16 @@ window.__TRADING_DASHBOARD__ = {
           "dayPnlRate": "+0.83%",
           "cumPnl": "-$6.52",
           "cumPnlRate": "-0.07%"
+        },
+        {
+          "date": "2026-03-17",
+          "totalAssets": "$10,026.83",
+          "cash": "$1,929.73",
+          "positionValue": "$8,097.10",
+          "dayPnl": "+$33.35",
+          "dayPnlRate": "+0.33%",
+          "cumPnl": "+$26.83",
+          "cumPnlRate": "+0.27%"
         }
       ],
       "pnlBreakdown": {
