@@ -1,29 +1,29 @@
 window.__TRADING_DASHBOARD__ = {
-  "updatedAt": "2026-03-16, 17:26:04",
+  "updatedAt": "2026-03-17, 08:42:34",
   "markets": {
     "aShare": {
       "label": "A股",
       "portfolio": {
         "market": "A股",
         "latestTime": "按日报更新",
-        "totalAssets": "¥1,015,813",
-        "cash": "¥317,065",
-        "positionValue": "¥698,748",
-        "cashRatio": "31.21%",
-        "positionRatio": "68.79%",
-        "pnl": "+¥15,813",
-        "pnlRate": "+1.58%",
+        "totalAssets": "¥1,014,600",
+        "cash": "¥357,556",
+        "positionValue": "¥657,044",
+        "cashRatio": "35.24%",
+        "positionRatio": "64.76%",
+        "pnl": "+¥14,600",
+        "pnlRate": "+1.46%",
         "holdings": [
-          "000333 美的集团：2,500 股，成本价 ¥77.30，最新价 ¥76.64，持仓市值 ¥191,600，占比 18.86%，浮盈亏 -¥1,650",
-          "002594 比亚迪：1,500 股，成本价 ¥99.23，最新价 ¥104.62，持仓市值 ¥156,930，占比 15.45%，浮盈亏 +¥8,085",
-          "300750 宁德时代：500 股，成本价 ¥401.68，最新价 ¥408.40，持仓市值 ¥204,200，占比 20.10%，浮盈亏 +¥3,360",
-          "600519 贵州茅台：100 股，成本价 ¥1,400.00，最新价 ¥1,460.18，持仓市值 ¥146,018，占比 14.37%，浮盈亏 +¥6,018"
+          "000333 美的集团：2,500 股，成本价 ¥77.30，最新价 ¥76.66，持仓市值 ¥191,650，占比 18.89%，浮盈亏 -¥1,600",
+          "002594 比亚迪：1,500 股，成本价 ¥99.23，最新价 ¥102.91，持仓市值 ¥154,365，占比 15.21%，浮盈亏 +¥5,520",
+          "300750 宁德时代：400 股，成本价 ¥400.00，最新价 ¥404.91，持仓市值 ¥161,964，占比 15.96%，浮盈亏 +¥1,964",
+          "600519 贵州茅台：100 股，成本价 ¥1,400.00，最新价 ¥1,490.65，持仓市值 ¥149,065，占比 14.69%，浮盈亏 +¥9,065"
         ]
       },
       "stats": {
         "buys": 5,
-        "sells": 0,
-        "lastTrade": "2026-03-16 BUY"
+        "sells": 1,
+        "lastTrade": "2026-03-17 SELL"
       },
       "trades": [
         {
@@ -97,9 +97,26 @@ window.__TRADING_DASHBOARD__ = {
           "reason": "ChiNext leads intraday and CATL strengthens with growth risk appetite improving",
           "cash_after": "317065",
           "position_ratio_after": "68.79%"
+        },
+        {
+          "date": "2026-03-17",
+          "action": "SELL",
+          "ticker": "300750",
+          "name": "宁德时代",
+          "price": "404.91",
+          "shares": "100",
+          "amount": "40491",
+          "reason": "ChiNext weakens sharply intraday and risk appetite fades so unwind the tactical add-on lot",
+          "cash_after": "357556",
+          "position_ratio_after": "64.76%"
         }
       ],
       "reports": [
+        {
+          "name": "a-share-daily-report-2026-03-17.pdf",
+          "path": "reports/a-share-daily-report-2026-03-17.pdf",
+          "updatedAt": "2026-03-17, 03:11:24"
+        },
         {
           "name": "a-share-daily-report-2026-03-16.pdf",
           "path": "reports/a-share-daily-report-2026-03-16.pdf",
@@ -155,23 +172,23 @@ window.__TRADING_DASHBOARD__ = {
       "allocation": [
         {
           "label": "000333 美的集团",
-          "value": 18.86
+          "value": 18.89
         },
         {
           "label": "002594 比亚迪",
-          "value": 15.45
+          "value": 15.21
         },
         {
           "label": "300750 宁德时代",
-          "value": 20.1
+          "value": 15.96
         },
         {
           "label": "600519 贵州茅台",
-          "value": 14.37
+          "value": 14.69
         },
         {
           "label": "现金",
-          "value": 31.21
+          "value": 35.24
         }
       ],
       "riskAlerts": []
