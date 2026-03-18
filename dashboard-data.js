@@ -1,5 +1,5 @@
 window.__TRADING_DASHBOARD__ = {
-  "updatedAt": "2026-03-17, 17:05:53",
+  "updatedAt": "2026-03-18, 13:44:25",
   "markets": {
     "aShare": {
       "label": "A股",
@@ -113,6 +113,11 @@ window.__TRADING_DASHBOARD__ = {
       ],
       "reports": [
         {
+          "name": "a-share-daily-report-2026-03-18.pdf",
+          "path": "reports/a-share-daily-report-2026-03-18.pdf",
+          "updatedAt": "2026-03-18, 13:43:55"
+        },
+        {
           "name": "a-share-daily-report-2026-03-17.pdf",
           "path": "reports/a-share-daily-report-2026-03-17.pdf",
           "updatedAt": "2026-03-17, 03:11:24"
@@ -171,6 +176,16 @@ window.__TRADING_DASHBOARD__ = {
           "positionValue": "¥657,044",
           "dayPnl": "-¥1,213",
           "dayPnlRate": "-0.12%",
+          "cumPnl": "+¥14,600",
+          "cumPnlRate": "+1.46%"
+        },
+        {
+          "date": "2026-03-18",
+          "totalAssets": "¥1,014,600",
+          "cash": "¥357,556",
+          "positionValue": "¥657,044",
+          "dayPnl": "¥0",
+          "dayPnlRate": "0.00%",
           "cumPnl": "+¥14,600",
           "cumPnlRate": "+1.46%"
         }
