@@ -1,5 +1,5 @@
 window.__TRADING_DASHBOARD__ = {
-  "updatedAt": "2026-03-19, 11:06:24",
+  "updatedAt": "2026-03-19, 11:09:48",
   "markets": {
     "aShare": {
       "label": "A股",
@@ -112,6 +112,11 @@ window.__TRADING_DASHBOARD__ = {
         }
       ],
       "reports": [
+        {
+          "name": "a-share-daily-report-2026-03-19.pdf",
+          "path": "reports/a-share-daily-report-2026-03-19.pdf",
+          "updatedAt": "2026-03-19, 11:06:25"
+        },
         {
           "name": "a-share-daily-report-2026-03-18.pdf",
           "path": "reports/a-share-daily-report-2026-03-18.pdf",
@@ -421,6 +426,16 @@ window.__TRADING_DASHBOARD__ = {
           "dayPnlRate": "+0.33%",
           "cumPnl": "+$26.83",
           "cumPnlRate": "+0.27%"
+        },
+        {
+          "date": "2026-03-18",
+          "totalAssets": "$9,919.83",
+          "cash": "$1,929.73",
+          "positionValue": "$7,990.10",
+          "dayPnl": "-$107.00",
+          "dayPnlRate": "-1.07%",
+          "cumPnl": "-$80.17",
+          "cumPnlRate": "-0.80%"
         }
       ],
       "pnlBreakdown": {
