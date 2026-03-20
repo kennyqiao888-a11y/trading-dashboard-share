@@ -1,5 +1,5 @@
 window.__TRADING_DASHBOARD__ = {
-  "updatedAt": "2026-03-19, 11:09:48",
+  "updatedAt": "2026-03-20, 10:31:13",
   "markets": {
     "aShare": {
       "label": "A股",
@@ -242,23 +242,23 @@ window.__TRADING_DASHBOARD__ = {
       "label": "美股",
       "portfolio": {
         "market": "美股",
-        "latestTime": "2026-03-19 11:02 ET（盘中）",
-        "totalAssets": "$9,876.78",
-        "cash": "$2,820.33",
-        "positionValue": "$7,056.45",
-        "cashRatio": "28.56%",
-        "positionRatio": "71.44%",
-        "pnl": "-$123.22",
-        "pnlRate": "-1.23%",
+        "latestTime": "2026-03-19 收盘",
+        "totalAssets": "$9,871.63",
+        "cash": "$4,060.78",
+        "positionValue": "$5,810.85",
+        "cashRatio": "41.14%",
+        "positionRatio": "58.86%",
+        "pnl": "-$128.37",
+        "pnlRate": "-1.28%",
         "holdings": [
-          "NVDA NVIDIA：10 股，成本价 $182.34，现价 $178.12，持仓市值 $1,781.20，占比 18.03%，浮盈亏 -$42.20",
-          "AAPL Apple：15 股，成本价 $254.64，现价 $249.96，持仓市值 $3,749.40，占比 37.96%，浮盈亏 -$70.20",
-          "GOOGL Alphabet：5 股，成本价 $302.56，现价 $305.17，持仓市值 $1,525.85，占比 15.45%，浮盈亏 +$13.05"
+          "NVDA NVIDIA：10 股，成本价 $182.34，现价 $178.56，持仓市值 $1,785.60，占比 18.09%，浮盈亏 -$37.80",
+          "AAPL Apple：10 股，成本价 $254.64，现价 $248.96，持仓市值 $2,489.60，占比 25.22%，浮盈亏 -$56.80",
+          "GOOGL Alphabet：5 股，成本价 $302.56，现价 $307.13，持仓市值 $1,535.65，占比 15.56%，浮盈亏 +$22.85"
         ]
       },
       "stats": {
         "buys": 5,
-        "sells": 2,
+        "sells": 3,
         "lastTrade": "2026-03-19 SELL"
       },
       "trades": [
@@ -357,9 +357,26 @@ window.__TRADING_DASHBOARD__ = {
           "reason": "Trim high-beta semiconductor exposure as broad market stays under pressure intraday with VIX above 25 and NVDA lagging while AAPL remains relatively resilient",
           "cash_after": "2820.33",
           "position_ratio_after": "71.44%"
+        },
+        {
+          "date": "2026-03-19",
+          "action": "SELL",
+          "ticker": "AAPL",
+          "name": "Apple",
+          "price": "248.09",
+          "shares": "5",
+          "amount": "1240.45",
+          "reason": "Trim largest remaining position as market weakness broadens into early afternoon and preserve flexibility for lower-risk redeployment",
+          "cash_after": "4060.78",
+          "position_ratio_after": "58.78%"
         }
       ],
       "reports": [
+        {
+          "name": "us-daily-report-2026-03-18-final.pdf",
+          "path": "reports/us-daily-report-2026-03-18-final.pdf",
+          "updatedAt": "2026-03-19, 11:09:50"
+        },
         {
           "name": "us-daily-report-2026-03-17-final.pdf",
           "path": "reports/us-daily-report-2026-03-17-final.pdf",
@@ -436,6 +453,16 @@ window.__TRADING_DASHBOARD__ = {
           "dayPnlRate": "-1.07%",
           "cumPnl": "-$80.17",
           "cumPnlRate": "-0.80%"
+        },
+        {
+          "date": "2026-03-19",
+          "totalAssets": "$9,871.63",
+          "cash": "$4,060.78",
+          "positionValue": "$5,810.85",
+          "dayPnl": "-$48.20",
+          "dayPnlRate": "-0.49%",
+          "cumPnl": "-$128.37",
+          "cumPnlRate": "-1.28%"
         }
       ],
       "pnlBreakdown": {
@@ -445,25 +472,25 @@ window.__TRADING_DASHBOARD__ = {
       "allocation": [
         {
           "label": "NVDA NVIDIA",
-          "value": 18.03
+          "value": 18.09
         },
         {
           "label": "AAPL Apple",
-          "value": 37.96
+          "value": 25.22
         },
         {
           "label": "GOOGL Alphabet",
-          "value": 15.45
+          "value": 15.56
         },
         {
           "label": "现金",
-          "value": 28.56
+          "value": 41.14
         }
       ],
       "riskAlerts": [
         {
-          "level": "warn",
-          "text": "单票仓位偏高：AAPL Apple 占比 37.96%。"
+          "level": "info",
+          "text": "最近 3 个快照里出现了 2 次以上单日回撤，注意节奏。"
         }
       ]
     }
