@@ -16,6 +16,8 @@
     .hero-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}.hero-mini{padding:14px;border-radius:16px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16)}.hero-mini .k{font-size:12px;opacity:.8}.hero-mini .v{font-size:20px;font-weight:800;margin-top:6px}
     .decision-box{margin-top:16px;padding:16px;border-radius:18px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16)}.decision-title{font-size:13px;opacity:.8}.decision-action{font-size:28px;font-weight:900;margin-top:8px}.decision-reason{margin-top:8px;line-height:1.6;font-size:14px;opacity:.95}
     .score-card{padding:14px;border:1px solid var(--line);border-radius:16px;background:#fbfcfe}.score-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.score-num{font-size:24px;font-weight:900}.badge{display:inline-block;padding:5px 10px;border-radius:999px;background:#eef2ff;color:#3730a3;font-size:12px;font-weight:800}.rule-list{margin:0;padding-left:18px;line-height:1.7}
+    .signal{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:800}.signal::before{content:'';width:8px;height:8px;border-radius:999px;background:currentColor}.signal.green{background:#ecfdf3;color:#15803d}.signal.amber{background:#fffbeb;color:#b45309}.signal.orange{background:#fff7ed;color:#c2410c}.signal.red{background:#fef2f2;color:#b91c1c}
+    .breakdown-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:10px}.tiny{font-size:12px;color:var(--muted)}
     .card{padding:18px}.section-title{margin:0 0 12px;font-size:18px}.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-bottom:18px}.stat{padding:16px}.label{font-size:12px;color:var(--muted)}.value{margin-top:8px;font-size:26px;font-weight:900}.up{color:var(--green)}.down{color:var(--red)}
     .layout{display:grid;grid-template-columns:360px 1fr;gap:18px}.stack{display:grid;gap:18px}.line-list{display:grid;gap:10px}.line-item{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fbfcfe}.name{font-weight:700}.meta{font-size:12px;color:var(--muted);margin-top:4px}.amount{font-weight:900;white-space:nowrap}
     .alert{padding:12px 14px;border-radius:14px;border:1px solid #fde68a;background:#fffbeb}.alert.warn{border-color:#fdba74;background:#fff7ed}.alert.info{border-color:#bfdbfe;background:#eff6ff}.alert + .alert{margin-top:10px}
@@ -87,7 +89,17 @@
               </div>
               <div class="score-num" id="marketStateScore">-</div>
             </div>
+            <div style="margin-top:10px"><span class="signal amber" id="marketSignal">-</span></div>
             <div class="meta" id="marketStateSummary" style="margin-top:10px"></div>
+          </div>
+        </div>
+        <div class="card">
+          <h2 class="section-title">日报联动简报</h2>
+          <div class="score-card">
+            <div class="name" id="dailyBriefTitle">-</div>
+            <div class="meta" id="dailyBriefSummary" style="margin-top:10px"></div>
+            <div class="meta" id="dailyBriefFocus" style="margin-top:10px"></div>
+            <div class="meta" id="dailyBriefNext" style="margin-top:10px"></div>
           </div>
         </div>
         <div class="card">
@@ -179,6 +191,8 @@ function render(){
 
   const plan=m.actionPlan||{}; document.getElementById('heroAction').textContent=plan.action||'继续观察'; document.getElementById('heroReason').textContent=`${plan.reason||''} ${plan.execution||''}`.trim();
   const state=m.marketState||{}; document.getElementById('marketStateStatus').textContent=state.status||'-'; document.getElementById('marketStateScore').textContent=(state.score!=null?`${state.score}/100`:'-'); document.getElementById('marketStateSummary').textContent=state.summary||'暂无市场状态分析';
+  const signalEl=document.getElementById('marketSignal'); const signal=state.score>=60?{label:'绿灯｜可观察进攻',color:'green'}:state.score>=45?{label:'黄灯｜中性观察',color:'amber'}:state.score>=35?{label:'橙灯｜偏防守',color:'orange'}:{label:'红灯｜优先降风险',color:'red'}; signalEl.className=`signal ${signal.color}`; signalEl.textContent=signal.label;
+  const brief=m.dailyBrief||{}; document.getElementById('dailyBriefTitle').textContent=brief.title||'-'; document.getElementById('dailyBriefSummary').textContent=brief.summary||'-'; document.getElementById('dailyBriefFocus').textContent=brief.focus||'-'; document.getElementById('dailyBriefNext').textContent=brief.next||'-';
   const rules=m.ruleCard||[]; document.getElementById('ruleCardList').innerHTML=rules.length?rules.map(r=>`<li>${r}</li>`).join(''):'<li>暂无规则</li>';
 
   const riskAlerts=m.riskAlerts||[]; document.getElementById('riskList').innerHTML=riskAlerts.length?riskAlerts.map(r=>`<div class="alert ${r.level||'info'}">${r.text}</div>`).join(''):'<div class="hint">当前没有显著风险提醒。</div>';
@@ -191,7 +205,7 @@ function render(){
   const reports=m.reports||[]; const reportHtml=reports.length?reports.map(r=>`<div class="report-item"><div><a href="${r.path}" target="_blank">${r.name}</a><div class="hint">${r.updatedAt||''}</div></div></div>`).join(''):'<div class="hint">暂无日报文件</div>';
   document.getElementById('reportLinks').innerHTML=reportHtml; document.getElementById('reportsHistory').innerHTML=reportHtml;
   document.getElementById('holdingsList').innerHTML=(p.holdings||[]).length?(p.holdings||[]).map(h=>`<div class="line-item"><div class="name">${h}</div></div>`).join(''):'<div class="hint">暂无持仓</div>';
-  const holdingScores=m.holdingScores||[]; document.getElementById('holdingScoresList').innerHTML=holdingScores.length?holdingScores.map(h=>`<div class="line-item"><div><div class="name">${h.label}</div><div class="meta">${h.action} · 仓位 ${h.ratio?.toFixed ? h.ratio.toFixed(2) : h.ratio}%</div></div><div style="text-align:right"><div class="amount ${h.score>=75?'up':h.score<45?'down':''}">${h.score}/100</div><div class="hint">${h.pnl>=0?'+':''}${Number(h.pnl||0).toFixed(2)}</div></div></div>`).join(''):'<div class="hint">暂无评分</div>';
+  const holdingScores=m.holdingScores||[]; document.getElementById('holdingScoresList').innerHTML=holdingScores.length?holdingScores.map(h=>`<div class="line-item"><div style="flex:1"><div class="score-head"><div><div class="name">${h.label}</div><div class="meta">${h.action} · 仓位 ${h.ratio?.toFixed ? h.ratio.toFixed(2) : h.ratio}%</div></div><div style="text-align:right"><span class="signal ${h.signal?.color||'amber'}">${h.signal?.label||'-'}</span><div class="amount ${h.score>=75?'up':h.score<45?'down':''}" style="margin-top:6px">${h.score}/100</div><div class="hint">${h.pnl>=0?'+':''}${Number(h.pnl||0).toFixed(2)}</div></div></div><div class="breakdown-grid"><div><div class="tiny">趋势分</div><div class="name">${h.breakdown?.trend ?? '-'}</div></div><div><div class="tiny">仓位分</div><div class="name">${h.breakdown?.position ?? '-'}</div></div><div><div class="tiny">环境分</div><div class="name">${h.breakdown?.market ?? '-'}</div></div><div><div class="tiny">风险分</div><div class="name">${h.breakdown?.risk ?? '-'}</div></div></div></div></div>`).join(''):'<div class="hint">暂无评分</div>';
 
   document.getElementById('overviewPanel').style.display=currentView==='overview'?'':'none'; document.getElementById('tradesPanel').style.display=currentView==='trades'?'':'none'; document.getElementById('reportsPanel').style.display=currentView==='reports'?'':'none'; document.getElementById('historyPanel').style.display=currentView==='history'?'':'none';
   renderChart();
