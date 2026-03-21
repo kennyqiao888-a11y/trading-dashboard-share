@@ -1,5 +1,5 @@
 window.__TRADING_DASHBOARD__ = {
-  "updatedAt": "2026-03-20, 22:50:08",
+  "updatedAt": "2026-03-20, 23:09:18",
   "markets": {
     "aShare": {
       "label": "A股",
@@ -36,7 +36,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "",
           "reason": "Initialize A-share paper portfolio",
           "cash_after": "1000000",
-          "position_ratio_after": "0%"
+          "position_ratio_after": "0%",
+          "ruleTag": "初始建仓",
+          "actionType": "建仓",
+          "compliant": "是"
         },
         {
           "date": "2026-03-12",
@@ -48,7 +51,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "193250",
           "reason": "Core defensive white-chip with smart-home/AI appliance angle",
           "cash_after": "806750",
-          "position_ratio_after": "19.33%"
+          "position_ratio_after": "19.33%",
+          "ruleTag": "趋势加仓",
+          "actionType": "进攻",
+          "compliant": "是"
         },
         {
           "date": "2026-03-12",
@@ -60,7 +66,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "148845",
           "reason": "EV leader trend position",
           "cash_after": "657905",
-          "position_ratio_after": "34.21%"
+          "position_ratio_after": "34.21%",
+          "ruleTag": "趋势加仓",
+          "actionType": "进攻",
+          "compliant": "是"
         },
         {
           "date": "2026-03-12",
@@ -72,7 +81,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "160000",
           "reason": "Battery leader core position",
           "cash_after": "497905",
-          "position_ratio_after": "50.21%"
+          "position_ratio_after": "50.21%",
+          "ruleTag": "趋势加仓",
+          "actionType": "进攻",
+          "compliant": "是"
         },
         {
           "date": "2026-03-12",
@@ -84,7 +96,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "140000",
           "reason": "Defensive liquidity anchor to balance growth exposure",
           "cash_after": "357905",
-          "position_ratio_after": "64.21%"
+          "position_ratio_after": "64.21%",
+          "ruleTag": "趋势加仓",
+          "actionType": "进攻",
+          "compliant": "是"
         },
         {
           "date": "2026-03-16",
@@ -96,7 +111,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "40840",
           "reason": "ChiNext leads intraday and CATL strengthens with growth risk appetite improving",
           "cash_after": "317065",
-          "position_ratio_after": "68.79%"
+          "position_ratio_after": "68.79%",
+          "ruleTag": "趋势加仓",
+          "actionType": "进攻",
+          "compliant": "是"
         },
         {
           "date": "2026-03-17",
@@ -108,7 +126,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "40491",
           "reason": "ChiNext weakens sharply intraday and risk appetite fades so unwind the tactical add-on lot",
           "cash_after": "357556",
-          "position_ratio_after": "64.76%"
+          "position_ratio_after": "64.76%",
+          "ruleTag": "主动减仓",
+          "actionType": "防守",
+          "compliant": "是"
         }
       ],
       "reports": [
@@ -382,7 +403,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "",
           "reason": "Initialize US paper portfolio",
           "cash_after": "10000",
-          "position_ratio_after": "0%"
+          "position_ratio_after": "0%",
+          "ruleTag": "初始建仓",
+          "actionType": "建仓",
+          "compliant": "是"
         },
         {
           "date": "2026-03-12",
@@ -394,7 +418,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "2735.10",
           "reason": "AI leader core offensive position",
           "cash_after": "7264.90",
-          "position_ratio_after": "27.35%"
+          "position_ratio_after": "27.35%",
+          "ruleTag": "修复加仓",
+          "actionType": "进攻",
+          "compliant": "是"
         },
         {
           "date": "2026-03-12",
@@ -406,7 +433,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "2552.90",
           "reason": "Defensive large-cap to stabilize volatility",
           "cash_after": "4712.00",
-          "position_ratio_after": "52.88%"
+          "position_ratio_after": "52.88%",
+          "ruleTag": "修复加仓",
+          "actionType": "进攻",
+          "compliant": "是"
         },
         {
           "date": "2026-03-12",
@@ -418,7 +448,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "1586.56",
           "reason": "Semiconductor growth beta position",
           "cash_after": "3125.44",
-          "position_ratio_after": "68.75%"
+          "position_ratio_after": "68.75%",
+          "ruleTag": "修复加仓",
+          "actionType": "进攻",
+          "compliant": "是"
         },
         {
           "date": "2026-03-12",
@@ -430,7 +463,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "1512.80",
           "reason": "High-quality cash-flow tech balance",
           "cash_after": "1612.64",
-          "position_ratio_after": "83.87%"
+          "position_ratio_after": "83.87%",
+          "ruleTag": "修复加仓",
+          "actionType": "进攻",
+          "compliant": "是"
         },
         {
           "date": "2026-03-12",
@@ -442,7 +478,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "1583.84",
           "reason": "Trim high-beta semiconductor exposure as broad market weakens intraday",
           "cash_after": "3196.48",
-          "position_ratio_after": "68.11%"
+          "position_ratio_after": "68.11%",
+          "ruleTag": "主动减仓",
+          "actionType": "防守",
+          "compliant": "是"
         },
         {
           "date": "2026-03-16",
@@ -454,7 +493,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "1266.75",
           "reason": "Add modestly to defensive mega-cap as broad market rebounds while avoiding further semiconductor concentration",
           "cash_after": "1929.73",
-          "position_ratio_after": "80.61%"
+          "position_ratio_after": "80.61%",
+          "ruleTag": "修复加仓",
+          "actionType": "进攻",
+          "compliant": "是"
         },
         {
           "date": "2026-03-19",
@@ -466,7 +508,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "890.60",
           "reason": "Trim high-beta semiconductor exposure as broad market stays under pressure intraday with VIX above 25 and NVDA lagging while AAPL remains relatively resilient",
           "cash_after": "2820.33",
-          "position_ratio_after": "71.44%"
+          "position_ratio_after": "71.44%",
+          "ruleTag": "主动减仓",
+          "actionType": "防守",
+          "compliant": "是"
         },
         {
           "date": "2026-03-19",
@@ -478,7 +523,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "1240.45",
           "reason": "Trim largest remaining position as market weakness broadens into early afternoon and preserve flexibility for lower-risk redeployment",
           "cash_after": "4060.78",
-          "position_ratio_after": "58.78%"
+          "position_ratio_after": "58.78%",
+          "ruleTag": "主动减仓",
+          "actionType": "防守",
+          "compliant": "是"
         },
         {
           "date": "2026-03-20",
@@ -490,7 +538,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "602.92",
           "reason": "Trim the weakest holding into a broad risk-off tape with Nasdaq down about 1.25 percent and VIX above 26 while preserving core exposure in AAPL and NVDA",
           "cash_after": "4663.70",
-          "position_ratio_after": "52.46%"
+          "position_ratio_after": "52.46%",
+          "ruleTag": "主动减仓",
+          "actionType": "防守",
+          "compliant": "是"
         },
         {
           "date": "2026-03-20",
@@ -502,7 +553,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "902.91",
           "reason": "Exit the remaining GOOGL shares as the market stays risk-off into early afternoon with the S&P 500 down about 0.79 percent Nasdaq down about 1.25 percent and VIX near 25.45 while GOOGL remains the weakest holding and AAPL continues to show better relative resilience",
           "cash_after": "5566.61",
-          "position_ratio_after": "43.24%"
+          "position_ratio_after": "43.24%",
+          "ruleTag": "主动减仓",
+          "actionType": "防守",
+          "compliant": "是"
         },
         {
           "date": "2026-03-20",
@@ -514,7 +568,10 @@ window.__TRADING_DASHBOARD__ = {
           "amount": "867.40",
           "reason": "Trim NVDA further into a deeper late-afternoon risk-off move with Nasdaq down about 2.05 percent Dow down about 1.00 percent and VIX near 27.80 while NVDA falls about 2.85 percent and AAPL stays relatively resilient so the portfolio keeps a smaller observation stake and raises more defensive cash",
           "cash_after": "6434.01",
-          "position_ratio_after": "34.27%"
+          "position_ratio_after": "34.27%",
+          "ruleTag": "主动减仓",
+          "actionType": "防守",
+          "compliant": "是"
         }
       ],
       "reports": [
