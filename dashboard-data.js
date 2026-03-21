@@ -1,5 +1,5 @@
 window.__TRADING_DASHBOARD__ = {
-  "updatedAt": "2026-03-20, 23:31:35",
+  "updatedAt": "2026-03-20, 23:35:44",
   "markets": {
     "aShare": {
       "label": "A股",
@@ -374,23 +374,23 @@ window.__TRADING_DASHBOARD__ = {
       "label": "美股",
       "portfolio": {
         "market": "美股",
-        "latestTime": "2026-03-20 16:00 ET 收盘",
-        "totalAssets": "$9,778.56",
-        "cash": "$6,434.01",
+        "latestTime": "2026-03-20 23:34 ET（注资后）",
+        "totalAssets": "$199,778.56",
+        "cash": "$196,434.01",
         "positionValue": "$3,344.55",
-        "cashRatio": "65.80%",
-        "positionRatio": "34.20%",
+        "cashRatio": "98.33%",
+        "positionRatio": "1.67%",
         "pnl": "-$221.44",
-        "pnlRate": "-2.21%",
+        "pnlRate": "-0.11%",
         "holdings": [
-          "NVDA NVIDIA：5 股，成本价 $182.34，现价 $172.93，持仓市值 $864.65，占比 8.84%，浮盈亏 -$47.05",
-          "AAPL Apple：10 股，成本价 $254.64，现价 $247.99，持仓市值 $2,479.90，占比 25.36%，浮盈亏 -$66.50"
+          "NVDA NVIDIA：5 股，成本价 $182.34，现价 $172.93，持仓市值 $864.65，占比 0.43%，浮盈亏 -$47.05",
+          "AAPL Apple：10 股，成本价 $254.64，现价 $247.99，持仓市值 $2,479.90，占比 1.24%，浮盈亏 -$66.50"
         ]
       },
       "stats": {
         "buys": 5,
         "sells": 6,
-        "lastTrade": "2026-03-20 SELL"
+        "lastTrade": "2026-03-20 DEPOSIT"
       },
       "trades": [
         {
@@ -572,9 +572,29 @@ window.__TRADING_DASHBOARD__ = {
           "ruleTag": "主动减仓",
           "actionType": "防守",
           "compliant": "是"
+        },
+        {
+          "date": "2026-03-20",
+          "action": "DEPOSIT",
+          "ticker": "",
+          "name": "",
+          "price": "",
+          "shares": "",
+          "amount": "190000.00",
+          "reason": "Inject additional capital for larger-scale quant experiment",
+          "cash_after": "196434.01",
+          "position_ratio_after": "1.67%",
+          "ruleTag": "记录",
+          "actionType": "观察",
+          "compliant": "是"
         }
       ],
       "reports": [
+        {
+          "name": "us-daily-report-2026-03-20-final.pdf",
+          "path": "reports/us-daily-report-2026-03-20-final.pdf",
+          "updatedAt": "2026-03-20, 23:31:37"
+        },
         {
           "name": "us-daily-report-2026-03-19-final.pdf",
           "path": "reports/us-daily-report-2026-03-19-final.pdf",
@@ -690,15 +710,15 @@ window.__TRADING_DASHBOARD__ = {
       "allocation": [
         {
           "label": "NVDA NVIDIA",
-          "value": 8.84
+          "value": 0.43
         },
         {
           "label": "AAPL Apple",
-          "value": 25.36
+          "value": 1.24
         },
         {
           "label": "现金",
-          "value": 65.8
+          "value": 98.33
         }
       ],
       "riskAlerts": [
@@ -717,9 +737,9 @@ window.__TRADING_DASHBOARD__ = {
           "label": "NVDA NVIDIA",
           "score": 65,
           "action": "继续持有",
-          "ratio": 8.84,
+          "ratio": 0.43,
           "pnl": -47.05,
-          "note": "NVDA NVIDIA：5 股，成本价 $182.34，现价 $172.93，持仓市值 $864.65，占比 8.84%，浮盈亏 -$47.05",
+          "note": "NVDA NVIDIA：5 股，成本价 $182.34，现价 $172.93，持仓市值 $864.65，占比 0.43%，浮盈亏 -$47.05",
           "signal": {
             "label": "黄灯",
             "color": "amber"
@@ -733,20 +753,20 @@ window.__TRADING_DASHBOARD__ = {
         },
         {
           "label": "AAPL Apple",
-          "score": 42,
-          "action": "观察/控制仓位",
-          "ratio": 25.36,
+          "score": 65,
+          "action": "继续持有",
+          "ratio": 1.24,
           "pnl": -66.5,
-          "note": "AAPL Apple：10 股，成本价 $254.64，现价 $247.99，持仓市值 $2,479.90，占比 25.36%，浮盈亏 -$66.50",
+          "note": "AAPL Apple：10 股，成本价 $254.64，现价 $247.99，持仓市值 $2,479.90，占比 1.24%，浮盈亏 -$66.50",
           "signal": {
-            "label": "橙灯",
-            "color": "orange"
+            "label": "黄灯",
+            "color": "amber"
           },
           "breakdown": {
             "trend": 12,
-            "position": 10,
+            "position": 25,
             "market": 8,
-            "risk": 12
+            "risk": 20
           }
         }
       ],
