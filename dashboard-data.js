@@ -1,5 +1,5 @@
 window.__TRADING_DASHBOARD__ = {
-  "updatedAt": "2026-03-20, 23:09:18",
+  "updatedAt": "2026-03-20, 23:31:35",
   "markets": {
     "aShare": {
       "label": "A股",
@@ -671,6 +671,16 @@ window.__TRADING_DASHBOARD__ = {
           "dayPnlRate": "-0.49%",
           "cumPnl": "-$128.37",
           "cumPnlRate": "-1.28%"
+        },
+        {
+          "date": "2026-03-20",
+          "totalAssets": "$9,778.56",
+          "cash": "$6,434.01",
+          "positionValue": "$3,344.55",
+          "dayPnl": "-$93.07",
+          "dayPnlRate": "-0.94%",
+          "cumPnl": "-$221.44",
+          "cumPnlRate": "-2.21%"
         }
       ],
       "pnlBreakdown": {
@@ -753,7 +763,7 @@ window.__TRADING_DASHBOARD__ = {
       ],
       "dailyBrief": {
         "title": "美股 半量化简报",
-        "summary": "偏弱｜建议：偏防守｜单日 -$48.20。",
+        "summary": "偏弱｜建议：偏防守｜单日 -$93.07。",
         "focus": "当前相对最强关注：NVDA NVIDIA（65/100，继续持有）。",
         "next": "先守纪律，优先观察环境变化和仓位安全。"
       }
