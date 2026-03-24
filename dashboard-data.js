@@ -1,5 +1,5 @@
 window.__TRADING_DASHBOARD__ = {
-  "updatedAt": "2026-03-24, 11:20:50",
+  "updatedAt": "2026-03-24, 16:17:10",
   "markets": {
     "aShare": {
       "label": "A股",
@@ -181,6 +181,11 @@ window.__TRADING_DASHBOARD__ = {
           "name": "a-share-daily-report-2026-03-24.pdf",
           "path": "reports/a-share-daily-report-2026-03-24.pdf",
           "updatedAt": "2026-03-24, 03:12:25"
+        },
+        {
+          "name": "a-share-daily-report-2026-03-23.pdf",
+          "path": "reports/a-share-daily-report-2026-03-23.pdf",
+          "updatedAt": "2026-03-24, 11:20:52"
         },
         {
           "name": "a-share-daily-report-2026-03-20.pdf",
@@ -401,17 +406,17 @@ window.__TRADING_DASHBOARD__ = {
       "label": "美股",
       "portfolio": {
         "market": "美股",
-        "latestTime": "2026-03-23 收盘（ET）",
-        "totalAssets": "$199,778.91",
+        "latestTime": "2026-03-24 收盘（ET）",
+        "totalAssets": "$199,737.31",
         "cash": "$183,539.71",
-        "positionValue": "$16,239.20",
-        "cashRatio": "91.87%",
-        "positionRatio": "8.13%",
-        "pnl": "-$221.09",
-        "pnlRate": "-0.11%",
+        "positionValue": "$16,197.60",
+        "cashRatio": "91.89%",
+        "positionRatio": "8.11%",
+        "pnl": "-$262.69",
+        "pnlRate": "-0.13%",
         "holdings": [
-          "NVDA NVIDIA：35 股，成本价 $178.24，收盘价 $175.68，持仓市值 $6,148.80，占比 3.08%，浮盈亏 -$89.45",
-          "AAPL Apple：40 股，成本价 $252.85，收盘价 $252.26，持仓市值 $10,090.40，占比 5.05%，浮盈亏 -$23.70"
+          "NVDA NVIDIA：35 股，成本价 $178.24，收盘价 $175.20，持仓市值 $6,132.00，占比 3.07%，浮盈亏 -$106.25",
+          "AAPL Apple：40 股，成本价 $252.85，收盘价 $251.64，持仓市值 $10,065.60，占比 5.04%，浮盈亏 -$48.60"
         ]
       },
       "stats": {
@@ -678,6 +683,16 @@ window.__TRADING_DASHBOARD__ = {
       ],
       "reports": [
         {
+          "name": "us-daily-report-2026-03-24-final.pdf",
+          "path": "reports/us-daily-report-2026-03-24-final.pdf",
+          "updatedAt": "2026-03-24, 16:16:01"
+        },
+        {
+          "name": "us-daily-report-2026-03-23-final.pdf",
+          "path": "reports/us-daily-report-2026-03-23-final.pdf",
+          "updatedAt": "2026-03-24, 11:20:51"
+        },
+        {
           "name": "us-daily-report-2026-03-20-final.pdf",
           "path": "reports/us-daily-report-2026-03-20-final.pdf",
           "updatedAt": "2026-03-20, 23:31:37"
@@ -797,15 +812,15 @@ window.__TRADING_DASHBOARD__ = {
       "allocation": [
         {
           "label": "NVDA NVIDIA",
-          "value": 3.08
+          "value": 3.07
         },
         {
           "label": "AAPL Apple",
-          "value": 5.05
+          "value": 5.04
         },
         {
           "label": "现金",
-          "value": 91.87
+          "value": 91.89
         }
       ],
       "riskAlerts": [
@@ -824,9 +839,9 @@ window.__TRADING_DASHBOARD__ = {
           "label": "NVDA NVIDIA",
           "score": 65,
           "action": "继续持有",
-          "ratio": 3.08,
-          "pnl": -89.45,
-          "note": "NVDA NVIDIA：35 股，成本价 $178.24，收盘价 $175.68，持仓市值 $6,148.80，占比 3.08%，浮盈亏 -$89.45",
+          "ratio": 3.07,
+          "pnl": -106.25,
+          "note": "NVDA NVIDIA：35 股，成本价 $178.24，收盘价 $175.20，持仓市值 $6,132.00，占比 3.07%，浮盈亏 -$106.25",
           "signal": {
             "label": "黄灯",
             "color": "amber"
@@ -842,9 +857,9 @@ window.__TRADING_DASHBOARD__ = {
           "label": "AAPL Apple",
           "score": 65,
           "action": "继续持有",
-          "ratio": 5.05,
-          "pnl": -23.7,
-          "note": "AAPL Apple：40 股，成本价 $252.85，收盘价 $252.26，持仓市值 $10,090.40，占比 5.05%，浮盈亏 -$23.70",
+          "ratio": 5.04,
+          "pnl": -48.6,
+          "note": "AAPL Apple：40 股，成本价 $252.85，收盘价 $251.64，持仓市值 $10,065.60，占比 5.04%，浮盈亏 -$48.60",
           "signal": {
             "label": "黄灯",
             "color": "amber"
