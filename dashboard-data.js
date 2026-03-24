@@ -1,29 +1,28 @@
 window.__TRADING_DASHBOARD__ = {
-  "updatedAt": "2026-03-20, 23:35:44",
+  "updatedAt": "2026-03-24, 11:20:50",
   "markets": {
     "aShare": {
       "label": "A股",
       "portfolio": {
         "market": "A股",
         "latestTime": "按日报更新",
-        "totalAssets": "¥1,009,601.00",
-        "cash": "¥357,556.00",
-        "positionValue": "¥652,045.00",
-        "cashRatio": "35.41%",
-        "positionRatio": "64.59%",
-        "pnl": "+¥9,601.00",
-        "pnlRate": "+0.96%",
+        "totalAssets": "¥1,005,700.00",
+        "cash": "¥520,596.00",
+        "positionValue": "¥485,104.00",
+        "cashRatio": "51.76%",
+        "positionRatio": "48.24%",
+        "pnl": "+¥5,700.00",
+        "pnlRate": "+0.57%",
         "holdings": [
-          "000333 美的集团：2,500 股，成本价 ¥77.30，最新价 ¥75.12，持仓市值 ¥187,800.00，占比 18.60%，浮盈亏 ¥-5,450.00",
-          "002594 比亚迪：1,500 股，成本价 ¥99.23，最新价 ¥103.03，持仓市值 ¥154,545.00，占比 15.31%，浮盈亏 +¥5,700.00",
-          "300750 宁德时代：400 股，成本价 ¥400.00，最新价 ¥413.00，持仓市值 ¥165,200.00，占比 16.36%，浮盈亏 +¥5,200.00",
-          "600519 贵州茅台：100 股，成本价 ¥1400.00，最新价 ¥1445.00，持仓市值 ¥144,500.00，占比 14.31%，浮盈亏 +¥4,500.00"
+          "000333 美的集团：2,500 股，成本价 ¥77.30，最新价 ¥74.23，持仓市值 ¥185,575.00，占比 18.45%，浮盈亏 ¥-7,675.00",
+          "300750 宁德时代：400 股，成本价 ¥400.00，最新价 ¥396.99，持仓市值 ¥158,796.00，占比 15.79%，浮盈亏 ¥-1,204.00",
+          "600519 贵州茅台：100 股，成本价 ¥1400.00，最新价 ¥1407.33，持仓市值 ¥140,733.00，占比 13.99%，浮盈亏 +¥733.00"
         ]
       },
       "stats": {
         "buys": 5,
-        "sells": 1,
-        "lastTrade": "2026-03-17 SELL"
+        "sells": 4,
+        "lastTrade": "2026-03-23 SELL"
       },
       "trades": [
         {
@@ -130,9 +129,59 @@ window.__TRADING_DASHBOARD__ = {
           "ruleTag": "主动减仓",
           "actionType": "防守",
           "compliant": "是"
+        },
+        {
+          "date": "2026-03-23",
+          "action": "SELL",
+          "ticker": "002594",
+          "name": "比亚迪",
+          "price": "109.80",
+          "shares": "500",
+          "amount": "54900",
+          "reason": "Market breadth weak intraday while BYD surges >6%; trim into strength to lock partial swing profit and raise cash",
+          "cash_after": "412456",
+          "position_ratio_after": "59.15%",
+          "ruleTag": "主动减仓",
+          "actionType": "防守",
+          "compliant": "是"
+        },
+        {
+          "date": "2026-03-23",
+          "action": "SELL",
+          "ticker": "002594",
+          "name": "比亚迪",
+          "price": "107.69",
+          "shares": "500",
+          "amount": "53845",
+          "reason": "Broader market selloff deepens intraday while BYD remains relatively strong; trim another lot into strength to reduce exposure and raise cash",
+          "cash_after": "466301",
+          "position_ratio_after": "53.65%",
+          "ruleTag": "主动减仓",
+          "actionType": "防守",
+          "compliant": "是"
+        },
+        {
+          "date": "2026-03-23",
+          "action": "SELL",
+          "ticker": "002594",
+          "name": "比亚迪",
+          "price": "108.59",
+          "shares": "500",
+          "amount": "54295",
+          "reason": "At about 14:30 the major A-share indexes remain in a broad selloff while BYD still shows relative strength; exit the final lot into strength to cut portfolio drawdown risk and move below half exposure",
+          "cash_after": "520596",
+          "position_ratio_after": "48.16%",
+          "ruleTag": "主动减仓",
+          "actionType": "防守",
+          "compliant": "是"
         }
       ],
       "reports": [
+        {
+          "name": "a-share-daily-report-2026-03-24.pdf",
+          "path": "reports/a-share-daily-report-2026-03-24.pdf",
+          "updatedAt": "2026-03-24, 03:12:25"
+        },
         {
           "name": "a-share-daily-report-2026-03-20.pdf",
           "path": "reports/a-share-daily-report-2026-03-20.pdf",
@@ -248,23 +297,19 @@ window.__TRADING_DASHBOARD__ = {
       "allocation": [
         {
           "label": "000333 美的集团",
-          "value": 18.6
-        },
-        {
-          "label": "002594 比亚迪",
-          "value": 15.31
+          "value": 18.45
         },
         {
           "label": "300750 宁德时代",
-          "value": 16.36
+          "value": 15.79
         },
         {
           "label": "600519 贵州茅台",
-          "value": 14.31
+          "value": 13.99
         },
         {
           "label": "现金",
-          "value": 35.41
+          "value": 51.76
         }
       ],
       "riskAlerts": [
@@ -280,12 +325,12 @@ window.__TRADING_DASHBOARD__ = {
       },
       "holdingScores": [
         {
-          "label": "002594 比亚迪",
+          "label": "600519 贵州茅台",
           "score": 89,
           "action": "可加仓观察",
-          "ratio": 15.31,
-          "pnl": 5700,
-          "note": "002594 比亚迪：1,500 股，成本价 ¥99.23，最新价 ¥103.03，持仓市值 ¥154,545.00，占比 15.31%，浮盈亏 +¥5,700.00",
+          "ratio": 13.99,
+          "pnl": 733,
+          "note": "600519 贵州茅台：100 股，成本价 ¥1400.00，最新价 ¥1407.33，持仓市值 ¥140,733.00，占比 13.99%，浮盈亏 +¥733.00",
           "signal": {
             "label": "绿灯",
             "color": "green"
@@ -299,35 +344,17 @@ window.__TRADING_DASHBOARD__ = {
         },
         {
           "label": "300750 宁德时代",
-          "score": 89,
-          "action": "可加仓观察",
-          "ratio": 16.36,
-          "pnl": 5200,
-          "note": "300750 宁德时代：400 股，成本价 ¥400.00，最新价 ¥413.00，持仓市值 ¥165,200.00，占比 16.36%，浮盈亏 +¥5,200.00",
+          "score": 73,
+          "action": "继续持有",
+          "ratio": 15.79,
+          "pnl": -1204,
+          "note": "300750 宁德时代：400 股，成本价 ¥400.00，最新价 ¥396.99，持仓市值 ¥158,796.00，占比 15.79%，浮盈亏 ¥-1,204.00",
           "signal": {
-            "label": "绿灯",
-            "color": "green"
+            "label": "黄灯",
+            "color": "amber"
           },
           "breakdown": {
-            "trend": 28,
-            "position": 25,
-            "market": 16,
-            "risk": 20
-          }
-        },
-        {
-          "label": "600519 贵州茅台",
-          "score": 89,
-          "action": "可加仓观察",
-          "ratio": 14.31,
-          "pnl": 4500,
-          "note": "600519 贵州茅台：100 股，成本价 ¥1400.00，最新价 ¥1445.00，持仓市值 ¥144,500.00，占比 14.31%，浮盈亏 +¥4,500.00",
-          "signal": {
-            "label": "绿灯",
-            "color": "green"
-          },
-          "breakdown": {
-            "trend": 28,
+            "trend": 12,
             "position": 25,
             "market": 16,
             "risk": 20
@@ -337,9 +364,9 @@ window.__TRADING_DASHBOARD__ = {
           "label": "000333 美的集团",
           "score": 66,
           "action": "继续持有",
-          "ratio": 18.6,
-          "pnl": -5450,
-          "note": "000333 美的集团：2,500 股，成本价 ¥77.30，最新价 ¥75.12，持仓市值 ¥187,800.00，占比 18.60%，浮盈亏 ¥-5,450.00",
+          "ratio": 18.45,
+          "pnl": -7675,
+          "note": "000333 美的集团：2,500 股，成本价 ¥77.30，最新价 ¥74.23，持仓市值 ¥185,575.00，占比 18.45%，浮盈亏 ¥-7,675.00",
           "signal": {
             "label": "黄灯",
             "color": "amber"
@@ -366,7 +393,7 @@ window.__TRADING_DASHBOARD__ = {
       "dailyBrief": {
         "title": "A股 半量化简报",
         "summary": "中性｜建议：继续持有｜单日 +¥3,093。",
-        "focus": "当前相对最强关注：002594 比亚迪（89/100，可加仓观察）。",
+        "focus": "当前相对最强关注：600519 贵州茅台（89/100，可加仓观察）。",
         "next": "先守纪律，优先观察环境变化和仓位安全。"
       }
     },
@@ -374,23 +401,23 @@ window.__TRADING_DASHBOARD__ = {
       "label": "美股",
       "portfolio": {
         "market": "美股",
-        "latestTime": "2026-03-20 23:34 ET（注资后）",
-        "totalAssets": "$199,778.56",
-        "cash": "$196,434.01",
-        "positionValue": "$3,344.55",
-        "cashRatio": "98.33%",
-        "positionRatio": "1.67%",
-        "pnl": "-$221.44",
+        "latestTime": "2026-03-23 收盘（ET）",
+        "totalAssets": "$199,778.91",
+        "cash": "$183,539.71",
+        "positionValue": "$16,239.20",
+        "cashRatio": "91.87%",
+        "positionRatio": "8.13%",
+        "pnl": "-$221.09",
         "pnlRate": "-0.11%",
         "holdings": [
-          "NVDA NVIDIA：5 股，成本价 $182.34，现价 $172.93，持仓市值 $864.65，占比 0.43%，浮盈亏 -$47.05",
-          "AAPL Apple：10 股，成本价 $254.64，现价 $247.99，持仓市值 $2,479.90，占比 1.24%，浮盈亏 -$66.50"
+          "NVDA NVIDIA：35 股，成本价 $178.24，收盘价 $175.68，持仓市值 $6,148.80，占比 3.08%，浮盈亏 -$89.45",
+          "AAPL Apple：40 股，成本价 $252.85，收盘价 $252.26，持仓市值 $10,090.40，占比 5.05%，浮盈亏 -$23.70"
         ]
       },
       "stats": {
-        "buys": 5,
+        "buys": 9,
         "sells": 6,
-        "lastTrade": "2026-03-20 DEPOSIT"
+        "lastTrade": "2026-03-23 BUY"
       },
       "trades": [
         {
@@ -587,6 +614,66 @@ window.__TRADING_DASHBOARD__ = {
           "ruleTag": "记录",
           "actionType": "观察",
           "compliant": "是"
+        },
+        {
+          "date": "2026-03-23",
+          "action": "BUY",
+          "ticker": "NVDA",
+          "name": "NVIDIA",
+          "price": "178.15",
+          "shares": "20",
+          "amount": "3563.00",
+          "reason": "Add to the AI leader as the S&P 500 gains about 2.10 percent Nasdaq gains about 2.41 percent and Dow gains about 2.27 percent intraday signaling a broad risk-on rebound while keeping total portfolio exposure modest",
+          "cash_after": "192871.01",
+          "position_ratio_after": "4.03%",
+          "ruleTag": "修复加仓",
+          "actionType": "进攻",
+          "compliant": "是"
+        },
+        {
+          "date": "2026-03-23",
+          "action": "BUY",
+          "ticker": "AAPL",
+          "name": "Apple",
+          "price": "252.26",
+          "shares": "20",
+          "amount": "5045.20",
+          "reason": "Add defensive mega-cap exposure into the same broad market rebound to raise overall participation without concentrating too aggressively in semiconductors",
+          "cash_after": "187825.81",
+          "position_ratio_after": "6.02%",
+          "ruleTag": "修复加仓",
+          "actionType": "进攻",
+          "compliant": "是"
+        },
+        {
+          "date": "2026-03-23",
+          "action": "BUY",
+          "ticker": "NVDA",
+          "name": "NVIDIA",
+          "price": "176.35",
+          "shares": "10",
+          "amount": "1763.50",
+          "reason": "Add a second small NVDA tranche near 3 PM as Nasdaq holds about +1.8 percent and the broad tape remains risk-on while total portfolio exposure stays very low",
+          "cash_after": "186062.31",
+          "position_ratio_after": "6.90%",
+          "ruleTag": "修复加仓",
+          "actionType": "进攻",
+          "compliant": "是"
+        },
+        {
+          "date": "2026-03-23",
+          "action": "BUY",
+          "ticker": "AAPL",
+          "name": "Apple",
+          "price": "252.26",
+          "shares": "10",
+          "amount": "2522.60",
+          "reason": "Add a balancing AAPL tranche alongside NVDA into the still-strong afternoon tape so the portfolio raises participation without becoming too semiconductor-heavy",
+          "cash_after": "183539.71",
+          "position_ratio_after": "8.14%",
+          "ruleTag": "修复加仓",
+          "actionType": "进攻",
+          "compliant": "是"
         }
       ],
       "reports": [
@@ -710,15 +797,15 @@ window.__TRADING_DASHBOARD__ = {
       "allocation": [
         {
           "label": "NVDA NVIDIA",
-          "value": 0.43
+          "value": 3.08
         },
         {
           "label": "AAPL Apple",
-          "value": 1.24
+          "value": 5.05
         },
         {
           "label": "现金",
-          "value": 98.33
+          "value": 91.87
         }
       ],
       "riskAlerts": [
@@ -737,9 +824,9 @@ window.__TRADING_DASHBOARD__ = {
           "label": "NVDA NVIDIA",
           "score": 65,
           "action": "继续持有",
-          "ratio": 0.43,
-          "pnl": -47.05,
-          "note": "NVDA NVIDIA：5 股，成本价 $182.34，现价 $172.93，持仓市值 $864.65，占比 0.43%，浮盈亏 -$47.05",
+          "ratio": 3.08,
+          "pnl": -89.45,
+          "note": "NVDA NVIDIA：35 股，成本价 $178.24，收盘价 $175.68，持仓市值 $6,148.80，占比 3.08%，浮盈亏 -$89.45",
           "signal": {
             "label": "黄灯",
             "color": "amber"
@@ -755,9 +842,9 @@ window.__TRADING_DASHBOARD__ = {
           "label": "AAPL Apple",
           "score": 65,
           "action": "继续持有",
-          "ratio": 1.24,
-          "pnl": -66.5,
-          "note": "AAPL Apple：10 股，成本价 $254.64，现价 $247.99，持仓市值 $2,479.90，占比 1.24%，浮盈亏 -$66.50",
+          "ratio": 5.05,
+          "pnl": -23.7,
+          "note": "AAPL Apple：40 股，成本价 $252.85，收盘价 $252.26，持仓市值 $10,090.40，占比 5.05%，浮盈亏 -$23.70",
           "signal": {
             "label": "黄灯",
             "color": "amber"
