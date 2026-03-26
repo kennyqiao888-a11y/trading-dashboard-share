@@ -1,28 +1,28 @@
 window.__TRADING_DASHBOARD__ = {
-  "updatedAt": "2026-03-24, 16:17:10",
+  "updatedAt": "2026-03-26, 12:16:04",
   "markets": {
     "aShare": {
       "label": "A股",
       "portfolio": {
         "market": "A股",
         "latestTime": "按日报更新",
-        "totalAssets": "¥1,005,700.00",
-        "cash": "¥520,596.00",
-        "positionValue": "¥485,104.00",
-        "cashRatio": "51.76%",
-        "positionRatio": "48.24%",
-        "pnl": "+¥5,700.00",
-        "pnlRate": "+0.57%",
+        "totalAssets": "¥1,008,469.00",
+        "cash": "¥521,551.00",
+        "positionValue": "¥486,918.00",
+        "cashRatio": "51.72%",
+        "positionRatio": "48.28%",
+        "pnl": "+¥8,469.00",
+        "pnlRate": "+0.85%",
         "holdings": [
-          "000333 美的集团：2,500 股，成本价 ¥77.30，最新价 ¥74.23，持仓市值 ¥185,575.00，占比 18.45%，浮盈亏 ¥-7,675.00",
-          "300750 宁德时代：400 股，成本价 ¥400.00，最新价 ¥396.99，持仓市值 ¥158,796.00，占比 15.79%，浮盈亏 ¥-1,204.00",
-          "600519 贵州茅台：100 股，成本价 ¥1400.00，最新价 ¥1407.33，持仓市值 ¥140,733.00，占比 13.99%，浮盈亏 +¥733.00"
+          "000333 美的集团：2,500 股，成本价 ¥77.30，最新价 ¥74.32，持仓市值 ¥185,800.00，占比 18.42%，浮盈亏 ¥-7,450.00",
+          "300750 宁德时代：400 股，成本价 ¥400.00，最新价 ¥402.50，持仓市值 ¥161,000.00，占比 15.96%，浮盈亏 +¥1,000.00",
+          "600519 贵州茅台：100 股，成本价 ¥1400.00，最新价 ¥1401.18，持仓市值 ¥140,118.00，占比 13.89%，浮盈亏 +¥118.00"
         ]
       },
       "stats": {
-        "buys": 5,
-        "sells": 4,
-        "lastTrade": "2026-03-23 SELL"
+        "buys": 6,
+        "sells": 5,
+        "lastTrade": "2026-03-26 SELL"
       },
       "trades": [
         {
@@ -174,6 +174,36 @@ window.__TRADING_DASHBOARD__ = {
           "ruleTag": "主动减仓",
           "actionType": "防守",
           "compliant": "是"
+        },
+        {
+          "date": "2026-03-25",
+          "action": "BUY",
+          "ticker": "300750",
+          "name": "宁德时代",
+          "price": "397.09",
+          "shares": "100",
+          "amount": "39709",
+          "reason": "Broad A-share rebound resumes intraday with Shanghai/Shenzhen/ChiNext all positive around midday; add one tactical lot to the growth leader while keeping cash near half for risk control",
+          "cash_after": "480887",
+          "position_ratio_after": "52.20%",
+          "ruleTag": "趋势加仓",
+          "actionType": "进攻",
+          "compliant": "是"
+        },
+        {
+          "date": "2026-03-26",
+          "action": "SELL",
+          "ticker": "300750",
+          "name": "宁德时代",
+          "price": "406.64",
+          "shares": "100",
+          "amount": "40664",
+          "reason": "Shanghai and Shenzhen turn weaker intraday while CATL remains up about 2.2%; unwind yesterday's tactical add-on lot into relative strength to lock a quick gain and move the portfolio back below half exposure",
+          "cash_after": "521551",
+          "position_ratio_after": "48.46%",
+          "ruleTag": "主动减仓",
+          "actionType": "防守",
+          "compliant": "是"
         }
       ],
       "reports": [
@@ -293,6 +323,46 @@ window.__TRADING_DASHBOARD__ = {
           "dayPnlRate": "+0.31%",
           "cumPnl": "+¥9,601",
           "cumPnlRate": "+0.96%"
+        },
+        {
+          "date": "2026-03-23",
+          "totalAssets": "¥1,005,624",
+          "cash": "¥520,596",
+          "positionValue": "¥485,028",
+          "dayPnl": "-¥3,977",
+          "dayPnlRate": "-0.40%",
+          "cumPnl": "+¥5,624",
+          "cumPnlRate": "+0.56%"
+        },
+        {
+          "date": "2026-03-24",
+          "totalAssets": "¥1,005,700",
+          "cash": "¥520,596",
+          "positionValue": "¥485,104",
+          "dayPnl": "+¥76",
+          "dayPnlRate": "+0.01%",
+          "cumPnl": "+¥5,700",
+          "cumPnlRate": "+0.57%"
+        },
+        {
+          "date": "2026-03-25",
+          "totalAssets": "¥1,008,469",
+          "cash": "¥521,551",
+          "positionValue": "¥486,918",
+          "dayPnl": "+¥2,769",
+          "dayPnlRate": "+0.28%",
+          "cumPnl": "+¥8,469",
+          "cumPnlRate": "+0.85%"
+        },
+        {
+          "date": "2026-03-26",
+          "totalAssets": "¥1,005,700",
+          "cash": "¥520,596",
+          "positionValue": "¥485,104",
+          "dayPnl": "-¥2,769",
+          "dayPnlRate": "-0.27%",
+          "cumPnl": "+¥5,700",
+          "cumPnlRate": "+0.57%"
         }
       ],
       "pnlBreakdown": {
@@ -302,40 +372,35 @@ window.__TRADING_DASHBOARD__ = {
       "allocation": [
         {
           "label": "000333 美的集团",
-          "value": 18.45
+          "value": 18.42
         },
         {
           "label": "300750 宁德时代",
-          "value": 15.79
+          "value": 15.96
         },
         {
           "label": "600519 贵州茅台",
-          "value": 13.99
+          "value": 13.89
         },
         {
           "label": "现金",
-          "value": 51.76
+          "value": 51.72
         }
       ],
-      "riskAlerts": [
-        {
-          "level": "info",
-          "text": "最近 3 个快照里出现了 2 次以上单日回撤，注意节奏。"
-        }
-      ],
+      "riskAlerts": [],
       "marketState": {
-        "score": 55,
+        "score": 45,
         "status": "中性",
-        "summary": "A股 当前判断：中性。最近信号分数 55/100，优先看板块联动和收盘确认。"
+        "summary": "A股 当前判断：中性。最近信号分数 45/100，优先看板块联动和收盘确认。"
       },
       "holdingScores": [
         {
-          "label": "600519 贵州茅台",
+          "label": "300750 宁德时代",
           "score": 89,
           "action": "可加仓观察",
-          "ratio": 13.99,
-          "pnl": 733,
-          "note": "600519 贵州茅台：100 股，成本价 ¥1400.00，最新价 ¥1407.33，持仓市值 ¥140,733.00，占比 13.99%，浮盈亏 +¥733.00",
+          "ratio": 15.96,
+          "pnl": 1000,
+          "note": "300750 宁德时代：400 股，成本价 ¥400.00，最新价 ¥402.50，持仓市值 ¥161,000.00，占比 15.96%，浮盈亏 +¥1,000.00",
           "signal": {
             "label": "绿灯",
             "color": "green"
@@ -348,18 +413,18 @@ window.__TRADING_DASHBOARD__ = {
           }
         },
         {
-          "label": "300750 宁德时代",
-          "score": 73,
-          "action": "继续持有",
-          "ratio": 15.79,
-          "pnl": -1204,
-          "note": "300750 宁德时代：400 股，成本价 ¥400.00，最新价 ¥396.99，持仓市值 ¥158,796.00，占比 15.79%，浮盈亏 ¥-1,204.00",
+          "label": "600519 贵州茅台",
+          "score": 89,
+          "action": "可加仓观察",
+          "ratio": 13.89,
+          "pnl": 118,
+          "note": "600519 贵州茅台：100 股，成本价 ¥1400.00，最新价 ¥1401.18，持仓市值 ¥140,118.00，占比 13.89%，浮盈亏 +¥118.00",
           "signal": {
-            "label": "黄灯",
-            "color": "amber"
+            "label": "绿灯",
+            "color": "green"
           },
           "breakdown": {
-            "trend": 12,
+            "trend": 28,
             "position": 25,
             "market": 16,
             "risk": 20
@@ -369,9 +434,9 @@ window.__TRADING_DASHBOARD__ = {
           "label": "000333 美的集团",
           "score": 66,
           "action": "继续持有",
-          "ratio": 18.45,
-          "pnl": -7675,
-          "note": "000333 美的集团：2,500 股，成本价 ¥77.30，最新价 ¥74.23，持仓市值 ¥185,575.00，占比 18.45%，浮盈亏 ¥-7,675.00",
+          "ratio": 18.42,
+          "pnl": -7450,
+          "note": "000333 美的集团：2,500 股，成本价 ¥77.30，最新价 ¥74.32，持仓市值 ¥185,800.00，占比 18.42%，浮盈亏 ¥-7,450.00",
           "signal": {
             "label": "黄灯",
             "color": "amber"
@@ -387,7 +452,7 @@ window.__TRADING_DASHBOARD__ = {
       "actionPlan": {
         "action": "继续持有",
         "reason": "当前组合没有出现需要立刻大幅调整的信号。",
-        "execution": "今天组合表现没有恶化，可继续按规则观察。"
+        "execution": "今天组合承压，优先看是否需要继续降波动。"
       },
       "ruleCard": [
         "收盘站上 5 日线 / 10 日线，再考虑加仓。",
@@ -397,8 +462,8 @@ window.__TRADING_DASHBOARD__ = {
       ],
       "dailyBrief": {
         "title": "A股 半量化简报",
-        "summary": "中性｜建议：继续持有｜单日 +¥3,093。",
-        "focus": "当前相对最强关注：600519 贵州茅台（89/100，可加仓观察）。",
+        "summary": "中性｜建议：继续持有｜单日 -¥2,769。",
+        "focus": "当前相对最强关注：300750 宁德时代（89/100，可加仓观察）。",
         "next": "先守纪律，优先观察环境变化和仓位安全。"
       }
     },
@@ -406,23 +471,23 @@ window.__TRADING_DASHBOARD__ = {
       "label": "美股",
       "portfolio": {
         "market": "美股",
-        "latestTime": "2026-03-24 收盘（ET）",
-        "totalAssets": "$199,737.31",
-        "cash": "$183,539.71",
-        "positionValue": "$16,197.60",
-        "cashRatio": "91.89%",
-        "positionRatio": "8.11%",
-        "pnl": "-$262.69",
-        "pnlRate": "-0.13%",
+        "latestTime": "2026-03-25 16:00 ET（收盘）",
+        "totalAssets": "$199,872.71",
+        "cash": "$179,201.11",
+        "positionValue": "$20,671.60",
+        "cashRatio": "89.66%",
+        "positionRatio": "10.34%",
+        "pnl": "-$127.29",
+        "pnlRate": "-0.06%",
         "holdings": [
-          "NVDA NVIDIA：35 股，成本价 $178.24，收盘价 $175.20，持仓市值 $6,132.00，占比 3.07%，浮盈亏 -$106.25",
-          "AAPL Apple：40 股，成本价 $252.85，收盘价 $251.64，持仓市值 $10,065.60，占比 5.04%，浮盈亏 -$48.60"
+          "NVDA NVIDIA：45 股，成本价 $178.73，现价 $178.68，持仓市值 $8,040.60，占比 4.02%，浮盈亏 -$2.25",
+          "AAPL Apple：50 股，成本价 $252.98，现价 $252.62，持仓市值 $12,631.00，占比 6.32%，浮盈亏 -$18.00"
         ]
       },
       "stats": {
-        "buys": 9,
+        "buys": 11,
         "sells": 6,
-        "lastTrade": "2026-03-23 BUY"
+        "lastTrade": "2026-03-25 BUY"
       },
       "trades": [
         {
@@ -679,6 +744,36 @@ window.__TRADING_DASHBOARD__ = {
           "ruleTag": "修复加仓",
           "actionType": "进攻",
           "compliant": "是"
+        },
+        {
+          "date": "2026-03-25",
+          "action": "BUY",
+          "ticker": "NVDA",
+          "name": "NVIDIA",
+          "price": "180.38",
+          "shares": "10",
+          "amount": "1803.80",
+          "reason": "Add another small NVDA tranche as the S&P 500 gains about 0.84 percent Nasdaq gains about 1.25 percent and VIX falls about 6.97 percent intraday confirming a broader risk-on continuation while portfolio exposure remains very light",
+          "cash_after": "181735.91",
+          "position_ratio_after": "9.04%",
+          "ruleTag": "修复加仓",
+          "actionType": "进攻",
+          "compliant": "是"
+        },
+        {
+          "date": "2026-03-25",
+          "action": "BUY",
+          "ticker": "AAPL",
+          "name": "Apple",
+          "price": "253.48",
+          "shares": "10",
+          "amount": "2534.80",
+          "reason": "Add a balancing AAPL tranche into the same broad risk-on tape so the portfolio increases participation while keeping exposure split between higher-beta AI leadership and steadier mega-cap quality",
+          "cash_after": "179201.11",
+          "position_ratio_after": "10.40%",
+          "ruleTag": "修复加仓",
+          "actionType": "进攻",
+          "compliant": "是"
         }
       ],
       "reports": [
@@ -812,15 +907,15 @@ window.__TRADING_DASHBOARD__ = {
       "allocation": [
         {
           "label": "NVDA NVIDIA",
-          "value": 3.07
+          "value": 4.02
         },
         {
           "label": "AAPL Apple",
-          "value": 5.04
+          "value": 6.32
         },
         {
           "label": "现金",
-          "value": 91.89
+          "value": 89.66
         }
       ],
       "riskAlerts": [
@@ -839,9 +934,9 @@ window.__TRADING_DASHBOARD__ = {
           "label": "NVDA NVIDIA",
           "score": 65,
           "action": "继续持有",
-          "ratio": 3.07,
-          "pnl": -106.25,
-          "note": "NVDA NVIDIA：35 股，成本价 $178.24，收盘价 $175.20，持仓市值 $6,132.00，占比 3.07%，浮盈亏 -$106.25",
+          "ratio": 4.02,
+          "pnl": -2.25,
+          "note": "NVDA NVIDIA：45 股，成本价 $178.73，现价 $178.68，持仓市值 $8,040.60，占比 4.02%，浮盈亏 -$2.25",
           "signal": {
             "label": "黄灯",
             "color": "amber"
@@ -857,9 +952,9 @@ window.__TRADING_DASHBOARD__ = {
           "label": "AAPL Apple",
           "score": 65,
           "action": "继续持有",
-          "ratio": 5.04,
-          "pnl": -48.6,
-          "note": "AAPL Apple：40 股，成本价 $252.85，收盘价 $251.64，持仓市值 $10,065.60，占比 5.04%，浮盈亏 -$48.60",
+          "ratio": 6.32,
+          "pnl": -18,
+          "note": "AAPL Apple：50 股，成本价 $252.98，现价 $252.62，持仓市值 $12,631.00，占比 6.32%，浮盈亏 -$18.00",
           "signal": {
             "label": "黄灯",
             "color": "amber"
