@@ -1,5 +1,5 @@
 window.__TRADING_DASHBOARD__ = {
-  "updatedAt": "2026-03-26, 12:23:26",
+  "updatedAt": "2026-03-26, 12:27:11",
   "markets": {
     "aShare": {
       "label": "A股",
@@ -908,6 +908,36 @@ window.__TRADING_DASHBOARD__ = {
           "dayPnlRate": "-0.94%",
           "cumPnl": "-$221.44",
           "cumPnlRate": "-2.21%"
+        },
+        {
+          "date": "2026-03-23",
+          "totalAssets": "$199,778.91",
+          "cash": "$183,539.71",
+          "positionValue": "$16,239.20",
+          "dayPnl": "+$0.35",
+          "dayPnlRate": "+0.00%",
+          "cumPnl": "-$221.09",
+          "cumPnlRate": "-0.11%"
+        },
+        {
+          "date": "2026-03-24",
+          "totalAssets": "$199,778.91",
+          "cash": "$183,539.71",
+          "positionValue": "$16,239.20",
+          "dayPnl": "$0.00",
+          "dayPnlRate": "0.00%",
+          "cumPnl": "-$221.09",
+          "cumPnlRate": "-0.11%"
+        },
+        {
+          "date": "2026-03-25",
+          "totalAssets": "$199,872.71",
+          "cash": "$179,201.11",
+          "positionValue": "$20,671.60",
+          "dayPnl": "+$93.80",
+          "dayPnlRate": "+0.05%",
+          "cumPnl": "-$127.29",
+          "cumPnlRate": "-0.06%"
         }
       ],
       "pnlBreakdown": {
@@ -928,59 +958,54 @@ window.__TRADING_DASHBOARD__ = {
           "value": 89.66
         }
       ],
-      "riskAlerts": [
-        {
-          "level": "info",
-          "text": "最近 3 个快照里出现了 2 次以上单日回撤，注意节奏。"
-        }
-      ],
+      "riskAlerts": [],
       "marketState": {
-        "score": 35,
-        "status": "偏弱",
-        "summary": "美股 当前判断：偏弱。最近信号分数 35/100，优先看指数、波动率和科技权重共振。"
+        "score": 65,
+        "status": "偏强",
+        "summary": "美股 当前判断：偏强。最近信号分数 65/100，优先看指数、波动率和科技权重共振。"
       },
       "holdingScores": [
         {
           "label": "NVDA NVIDIA",
-          "score": 65,
-          "action": "继续持有",
+          "score": 79,
+          "action": "可加仓观察",
           "ratio": 4.02,
           "pnl": -2.25,
           "note": "NVDA NVIDIA：45 股，成本价 $178.73，现价 $178.68，持仓市值 $8,040.60，占比 4.02%，浮盈亏 -$2.25",
           "signal": {
-            "label": "黄灯",
-            "color": "amber"
+            "label": "绿灯",
+            "color": "green"
           },
           "breakdown": {
             "trend": 12,
             "position": 25,
-            "market": 8,
+            "market": 22,
             "risk": 20
           }
         },
         {
           "label": "AAPL Apple",
-          "score": 65,
-          "action": "继续持有",
+          "score": 79,
+          "action": "可加仓观察",
           "ratio": 6.32,
           "pnl": -18,
           "note": "AAPL Apple：50 股，成本价 $252.98，现价 $252.62，持仓市值 $12,631.00，占比 6.32%，浮盈亏 -$18.00",
           "signal": {
-            "label": "黄灯",
-            "color": "amber"
+            "label": "绿灯",
+            "color": "green"
           },
           "breakdown": {
             "trend": 12,
             "position": 25,
-            "market": 8,
+            "market": 22,
             "risk": 20
           }
         }
       ],
       "actionPlan": {
-        "action": "偏防守",
-        "reason": "最近回撤偏多，先保现金和节奏，不急着扩仓。",
-        "execution": "今天组合承压，优先看是否需要继续降波动。"
+        "action": "可择机加仓",
+        "reason": "市场状态转暖且现金充足，可以等更强确认后加仓。",
+        "execution": "今天组合表现没有恶化，可继续按规则观察。"
       },
       "ruleCard": [
         "指数与个股同向走强，再考虑回补仓位。",
@@ -990,9 +1015,9 @@ window.__TRADING_DASHBOARD__ = {
       ],
       "dailyBrief": {
         "title": "美股 半量化简报",
-        "summary": "偏弱｜建议：偏防守｜单日 -$93.07。",
-        "focus": "当前相对最强关注：NVDA NVIDIA（65/100，继续持有）。",
-        "next": "先守纪律，优先观察环境变化和仓位安全。"
+        "summary": "偏强｜建议：可择机加仓｜单日 +$93.80。",
+        "focus": "当前相对最强关注：NVDA NVIDIA（79/100，可加仓观察）。",
+        "next": "等更强确认后再动，不提前抢跑。"
       }
     }
   }
