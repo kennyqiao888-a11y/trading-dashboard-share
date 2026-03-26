@@ -1,5 +1,5 @@
 window.__TRADING_DASHBOARD__ = {
-  "updatedAt": "2026-03-26, 12:27:11",
+  "updatedAt": "2026-03-26, 12:28:08",
   "markets": {
     "aShare": {
       "label": "A股",
@@ -787,6 +787,11 @@ window.__TRADING_DASHBOARD__ = {
         }
       ],
       "reports": [
+        {
+          "name": "us-daily-report-2026-03-25-final.pdf",
+          "path": "reports/us-daily-report-2026-03-25-final.pdf",
+          "updatedAt": "2026-03-26, 12:27:12"
+        },
         {
           "name": "us-daily-report-2026-03-24-final.pdf",
           "path": "reports/us-daily-report-2026-03-24-final.pdf",
