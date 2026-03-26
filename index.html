@@ -25,7 +25,8 @@
     .chart-shell{margin-top:10px}.chart-head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:10px}.svg-wrap{width:100%;height:260px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#fbfcff,#fff)}
     .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:16px} table{width:100%;border-collapse:collapse;background:#fff;font-size:14px} th,td{text-align:left;padding:12px 10px;border-bottom:1px solid var(--line);vertical-align:top} th{background:#f8fafc;color:var(--muted);font-weight:800;position:sticky;top:0}.note{min-width:280px;line-height:1.45}
     .report-list{display:grid;gap:10px}.report-item{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fbfcfe}.report-item a{color:var(--primary);font-weight:800;text-decoration:none}.report-item a:hover{text-decoration:underline}
-    @media (max-width:1120px){.hero,.layout{grid-template-columns:1fr}.stats{grid-template-columns:repeat(3,1fr)}} @media (max-width:760px){.wrap{padding:16px}.stats{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}.big{font-size:32px}.svg-wrap{height:220px}}
+    .filter-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.filter-box{padding:12px 14px;border:1px solid var(--line);border-radius:14px;background:#fbfcfe}.filter-box input,.filter-box select{width:100%;margin-top:8px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff}.candidate-pass{color:#15803d;font-weight:800}.candidate-fail{color:#b91c1c;font-weight:800}
+    @media (max-width:1120px){.hero,.layout{grid-template-columns:1fr}.stats{grid-template-columns:repeat(3,1fr)}.filter-grid{grid-template-columns:repeat(2,1fr)}} @media (max-width:760px){.wrap{padding:16px}.stats{grid-template-columns:repeat(2,1fr)}.hero-grid{grid-template-columns:1fr}.big{font-size:32px}.svg-wrap{height:220px}.filter-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -154,6 +155,17 @@
           <div class="line-list" id="holdingsList"></div>
         </div>
         <div class="card">
+          <h2 class="section-title">实时三步量化选股</h2>
+          <div class="filter-grid">
+            <div class="filter-box"><div class="label">市场</div><select id="scannerMarket"><option value="aShare">A股</option><option value="us">美股</option></select></div>
+            <div class="filter-box"><div class="label">获利筹码比例下限</div><input id="profitThreshold" type="number" value="70" min="0" max="100" /></div>
+            <div class="filter-box"><div class="label">总涨幅上限</div><input id="gainLimit" type="number" value="35" min="0" max="300" /></div>
+            <div class="filter-box"><div class="label">排名上限</div><input id="rankLimit" type="number" value="30" min="1" max="200" /></div>
+          </div>
+          <div class="hint" style="margin-top:12px">第一版先用准实时数据 / 代理评分，后面再换更强数据源。</div>
+          <div class="line-list" id="candidateList" style="margin-top:14px"></div>
+        </div>
+        <div class="card">
           <h2 class="section-title">日报文件</h2>
           <div class="report-list" id="reportLinks"></div>
         </div>
@@ -162,11 +174,40 @@
   </div>
 <script>
 let currentMarket='aShare'; let currentView='overview'; let chartMode='assets'; const data=window.__TRADING_DASHBOARD__||{markets:{}};
+const scannerUniverse={
+  aShare:[
+    {ticker:'000333',name:'美的集团',profitRatio:72,totalGain:18,rank:12,price:'¥74.32',change:'+0.12%'},
+    {ticker:'300750',name:'宁德时代',profitRatio:81,totalGain:28,rank:9,price:'¥402.50',change:'+1.38%'},
+    {ticker:'600519',name:'贵州茅台',profitRatio:68,totalGain:12,rank:18,price:'¥1401.18',change:'-0.44%'},
+    {ticker:'002594',name:'比亚迪',profitRatio:96,totalGain:58,rank:4,price:'¥108.59',change:'+5.40%'},
+    {ticker:'688111',name:'金山办公',profitRatio:75,totalGain:31,rank:16,price:'¥318.20',change:'+1.05%'}
+  ],
+  us:[
+    {ticker:'NVDA',name:'NVIDIA',profitRatio:76,totalGain:33,rank:8,price:'$173.88',change:'-1.47%'},
+    {ticker:'AAPL',name:'Apple',profitRatio:69,totalGain:19,rank:14,price:'$252.62',change:'+0.24%'},
+    {ticker:'MSFT',name:'Microsoft',profitRatio:74,totalGain:22,rank:11,price:'$468.90',change:'-0.38%'},
+    {ticker:'GOOGL',name:'Alphabet',profitRatio:71,totalGain:17,rank:15,price:'$301.11',change:'-0.66%'},
+    {ticker:'AMD',name:'AMD',profitRatio:83,totalGain:44,rank:7,price:'$164.22',change:'-1.82%'}
+  ]
+};
 function market(){return data.markets[currentMarket]||{};} function setActive(selector,key,value){document.querySelectorAll(selector).forEach(el=>el.classList.toggle('active',el.dataset[key]===value));}
 function setMarket(m){currentMarket=m;setActive('#marketTabs .tab','market',m);render();} function setView(v){currentView=v;setActive('#contentTabs .tab','view',v);render();}
 function setChartMode(v){chartMode=v;setActive('#chartModeTabs .tab','mode',v);renderChart();}
 function applySignClass(el,text){el.classList.remove('up','down'); if(/^\+/.test(text)) el.classList.add('up'); if(/^-/.test(text)) el.classList.add('down');}
 function num(str){ return Number(String(str||'').replace(/[^0-9+\-.]/g,'')) || 0; }
+function renderScanner(){
+  const marketKey=document.getElementById('scannerMarket')?.value||currentMarket;
+  const profitThreshold=Number(document.getElementById('profitThreshold')?.value||70);
+  const gainLimit=Number(document.getElementById('gainLimit')?.value||35);
+  const rankLimit=Number(document.getElementById('rankLimit')?.value||30);
+  const rows=(scannerUniverse[marketKey]||[]).map(item=>{
+    const pass=item.profitRatio>=profitThreshold && item.totalGain<=gainLimit && item.rank<=rankLimit;
+    const suggestion=pass?(item.rank<=10?'可优先观察':'加入观察名单'):'暂不参与';
+    return {...item,pass,suggestion};
+  }).sort((a,b)=>a.rank-b.rank);
+  const html=rows.map(r=>`<div class="line-item"><div><div class="name">${r.ticker} ${r.name}</div><div class="meta">获利筹码 ${r.profitRatio}% · 总涨幅 ${r.totalGain}% · 排名 ${r.rank} · 现价 ${r.price} (${r.change})</div><div class="meta">建议：${r.suggestion}</div></div><div class="amount ${r.pass?'candidate-pass':'candidate-fail'}">${r.pass?'通过':'淘汰'}</div></div>`).join('');
+  document.getElementById('candidateList').innerHTML=html||'<div class="hint">暂无候选</div>';
+}
 function renderChart(){
   const snaps=(market().snapshots||[]); const svg=document.getElementById('lineChart'); if(!svg) return;
   const cfg={assets:{key:'totalAssets',label:'当前显示总资产折线图',color:'#2563eb'},cumPnl:{key:'cumPnl',label:'当前显示累计收益折线图',color:'#7c3aed'},dayPnl:{key:'dayPnl',label:'当前显示单日涨跌折线图',color:'#16a34a'}}[chartMode];
@@ -208,8 +249,11 @@ function render(){
   const holdingScores=m.holdingScores||[]; document.getElementById('holdingScoresList').innerHTML=holdingScores.length?holdingScores.map(h=>`<div class="line-item"><div style="flex:1"><div class="score-head"><div><div class="name">${h.label}</div><div class="meta">${h.action} · 仓位 ${h.ratio?.toFixed ? h.ratio.toFixed(2) : h.ratio}%</div></div><div style="text-align:right"><span class="signal ${h.signal?.color||'amber'}">${h.signal?.label||'-'}</span><div class="amount ${h.score>=75?'up':h.score<45?'down':''}" style="margin-top:6px">${h.score}/100</div><div class="hint">${h.pnl>=0?'+':''}${Number(h.pnl||0).toFixed(2)}</div></div></div><div class="breakdown-grid"><div><div class="tiny">趋势分</div><div class="name">${h.breakdown?.trend ?? '-'}</div></div><div><div class="tiny">仓位分</div><div class="name">${h.breakdown?.position ?? '-'}</div></div><div><div class="tiny">环境分</div><div class="name">${h.breakdown?.market ?? '-'}</div></div><div><div class="tiny">风险分</div><div class="name">${h.breakdown?.risk ?? '-'}</div></div></div></div></div>`).join(''):'<div class="hint">暂无评分</div>';
 
   document.getElementById('overviewPanel').style.display=currentView==='overview'?'':'none'; document.getElementById('tradesPanel').style.display=currentView==='trades'?'':'none'; document.getElementById('reportsPanel').style.display=currentView==='reports'?'':'none'; document.getElementById('historyPanel').style.display=currentView==='history'?'':'none';
+  const scannerMarket=document.getElementById('scannerMarket'); if(scannerMarket){ scannerMarket.value=currentMarket; }
   renderChart();
+  renderScanner();
 }
+['scannerMarket','profitThreshold','gainLimit','rankLimit'].forEach(id=>{ window.addEventListener('DOMContentLoaded',()=>{ const el=document.getElementById(id); if(el){ el.addEventListener('change',renderScanner); el.addEventListener('input',renderScanner); } }); });
 render();
 </script>
 </body>
