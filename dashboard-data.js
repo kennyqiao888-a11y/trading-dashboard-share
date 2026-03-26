@@ -1,5 +1,5 @@
 window.__TRADING_DASHBOARD__ = {
-  "updatedAt": "2026-03-26, 12:43:41",
+  "updatedAt": "2026-03-26, 16:16:47",
   "markets": {
     "aShare": {
       "label": "A股",
@@ -481,23 +481,23 @@ window.__TRADING_DASHBOARD__ = {
       "label": "美股",
       "portfolio": {
         "market": "美股",
-        "latestTime": "2026-03-25 16:00 ET（收盘）",
-        "totalAssets": "$199,872.71",
-        "cash": "$179,201.11",
-        "positionValue": "$20,671.60",
-        "cashRatio": "89.66%",
-        "positionRatio": "10.34%",
-        "pnl": "-$127.29",
-        "pnlRate": "-0.06%",
+        "latestTime": "2026-03-26 16:10 ET（收盘后）",
+        "totalAssets": "$199,573.41",
+        "cash": "$182,646.91",
+        "positionValue": "$16,926.50",
+        "cashRatio": "91.52%",
+        "positionRatio": "8.48%",
+        "pnl": "-$426.59",
+        "pnlRate": "-0.21%",
         "holdings": [
-          "NVDA NVIDIA：45 股，成本价 $178.73，现价 $178.68，持仓市值 $8,040.60，占比 4.02%，浮盈亏 -$2.25",
-          "AAPL Apple：50 股，成本价 $252.98，现价 $252.62，持仓市值 $12,631.00，占比 6.32%，浮盈亏 -$18.00"
+          "NVDA NVIDIA：25 股，成本价 $178.85，现价 $171.43，持仓市值 $4,285.75，占比 2.15%，浮盈亏 -$185.50",
+          "AAPL Apple：50 股，成本价 $252.98，现价 $252.82，持仓市值 $12,640.75，占比 6.33%，浮盈亏 -$8.25"
         ]
       },
       "stats": {
         "buys": 11,
-        "sells": 6,
-        "lastTrade": "2026-03-25 BUY"
+        "sells": 7,
+        "lastTrade": "2026-03-26 SELL"
       },
       "trades": [
         {
@@ -784,9 +784,29 @@ window.__TRADING_DASHBOARD__ = {
           "ruleTag": "修复加仓",
           "actionType": "进攻",
           "compliant": "是"
+        },
+        {
+          "date": "2026-03-26",
+          "action": "SELL",
+          "ticker": "NVDA",
+          "name": "NVIDIA",
+          "price": "172.29",
+          "shares": "20",
+          "amount": "3445.80",
+          "reason": "Trim the weakest and highest-beta holding into a clear afternoon risk-off tape with the S&P 500 down about 1.41 percent Nasdaq down about 1.97 percent and Dow down about 0.82 percent while NVDA falls about 3.58 percent and AAPL stays relatively resilient",
+          "cash_after": "182646.91",
+          "position_ratio_after": "8.53%",
+          "ruleTag": "主动减仓",
+          "actionType": "防守",
+          "compliant": "是"
         }
       ],
       "reports": [
+        {
+          "name": "us-daily-report-2026-03-26-final.pdf",
+          "path": "reports/us-daily-report-2026-03-26-final.pdf",
+          "updatedAt": "2026-03-26, 16:16:46"
+        },
         {
           "name": "us-daily-report-2026-03-25-final.pdf",
           "path": "reports/us-daily-report-2026-03-25-final.pdf",
@@ -943,6 +963,16 @@ window.__TRADING_DASHBOARD__ = {
           "dayPnlRate": "+0.05%",
           "cumPnl": "-$127.29",
           "cumPnlRate": "-0.06%"
+        },
+        {
+          "date": "2026-03-26",
+          "totalAssets": "$199,573.41",
+          "cash": "$182,646.91",
+          "positionValue": "$16,926.50",
+          "dayPnl": "-$299.30",
+          "dayPnlRate": "-0.15%",
+          "cumPnl": "-$426.59",
+          "cumPnlRate": "-0.21%"
         }
       ],
       "pnlBreakdown": {
@@ -952,65 +982,65 @@ window.__TRADING_DASHBOARD__ = {
       "allocation": [
         {
           "label": "NVDA NVIDIA",
-          "value": 4.02
+          "value": 2.15
         },
         {
           "label": "AAPL Apple",
-          "value": 6.32
+          "value": 6.33
         },
         {
           "label": "现金",
-          "value": 89.66
+          "value": 91.52
         }
       ],
       "riskAlerts": [],
       "marketState": {
-        "score": 65,
-        "status": "偏强",
-        "summary": "美股 当前判断：偏强。最近信号分数 65/100，优先看指数、波动率和科技权重共振。"
+        "score": 45,
+        "status": "中性",
+        "summary": "美股 当前判断：中性。最近信号分数 45/100，优先看指数、波动率和科技权重共振。"
       },
       "holdingScores": [
         {
           "label": "NVDA NVIDIA",
-          "score": 79,
-          "action": "可加仓观察",
-          "ratio": 4.02,
-          "pnl": -2.25,
-          "note": "NVDA NVIDIA：45 股，成本价 $178.73，现价 $178.68，持仓市值 $8,040.60，占比 4.02%，浮盈亏 -$2.25",
+          "score": 73,
+          "action": "继续持有",
+          "ratio": 2.15,
+          "pnl": -185.5,
+          "note": "NVDA NVIDIA：25 股，成本价 $178.85，现价 $171.43，持仓市值 $4,285.75，占比 2.15%，浮盈亏 -$185.50",
           "signal": {
-            "label": "绿灯",
-            "color": "green"
+            "label": "黄灯",
+            "color": "amber"
           },
           "breakdown": {
             "trend": 12,
             "position": 25,
-            "market": 22,
+            "market": 16,
             "risk": 20
           }
         },
         {
           "label": "AAPL Apple",
-          "score": 79,
-          "action": "可加仓观察",
-          "ratio": 6.32,
-          "pnl": -18,
-          "note": "AAPL Apple：50 股，成本价 $252.98，现价 $252.62，持仓市值 $12,631.00，占比 6.32%，浮盈亏 -$18.00",
+          "score": 73,
+          "action": "继续持有",
+          "ratio": 6.33,
+          "pnl": -8.25,
+          "note": "AAPL Apple：50 股，成本价 $252.98，现价 $252.82，持仓市值 $12,640.75，占比 6.33%，浮盈亏 -$8.25",
           "signal": {
-            "label": "绿灯",
-            "color": "green"
+            "label": "黄灯",
+            "color": "amber"
           },
           "breakdown": {
             "trend": 12,
             "position": 25,
-            "market": 22,
+            "market": 16,
             "risk": 20
           }
         }
       ],
       "actionPlan": {
-        "action": "可择机加仓",
-        "reason": "市场状态转暖且现金充足，可以等更强确认后加仓。",
-        "execution": "今天组合表现没有恶化，可继续按规则观察。"
+        "action": "继续持有",
+        "reason": "当前组合没有出现需要立刻大幅调整的信号。",
+        "execution": "今天组合承压，优先看是否需要继续降波动。"
       },
       "ruleCard": [
         "指数与个股同向走强，再考虑回补仓位。",
@@ -1020,9 +1050,9 @@ window.__TRADING_DASHBOARD__ = {
       ],
       "dailyBrief": {
         "title": "美股 半量化简报",
-        "summary": "偏强｜建议：可择机加仓｜单日 +$93.80。",
-        "focus": "当前相对最强关注：NVDA NVIDIA（79/100，可加仓观察）。",
-        "next": "等更强确认后再动，不提前抢跑。"
+        "summary": "中性｜建议：继续持有｜单日 -$299.30。",
+        "focus": "当前相对最强关注：NVDA NVIDIA（73/100，继续持有）。",
+        "next": "先守纪律，优先观察环境变化和仓位安全。"
       }
     }
   }
