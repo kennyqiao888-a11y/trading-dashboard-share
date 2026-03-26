@@ -28,7 +28,10 @@ Get-ChildItem $tradingDir -Filter '*daily-report-*.pdf' | ForEach-Object {
   Copy-Item $_.FullName (Join-Path $reportsDir $_.Name) -Force
 }
 
-# 5) 自动提交并推送到 GitHub（如果有变更）
+# 5) 验证 share 数据源里引用的 PDF 是否都实际存在
+powershell -ExecutionPolicy Bypass -File (Join-Path $shareApp 'validate-share.ps1') | Out-Null
+
+# 6) 自动提交并推送到 GitHub（如果有变更）
 Push-Location $shareApp
 try {
   git add . | Out-Null
