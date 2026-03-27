@@ -1,28 +1,28 @@
 window.__TRADING_DASHBOARD__ = {
-  "updatedAt": "2026-03-26, 16:16:47",
+  "updatedAt": "2026-03-27, 12:02:33",
   "markets": {
     "aShare": {
       "label": "A股",
       "portfolio": {
         "market": "A股",
         "latestTime": "按日报更新",
-        "totalAssets": "¥1,008,469.00",
-        "cash": "¥521,551.00",
-        "positionValue": "¥486,918.00",
-        "cashRatio": "51.72%",
-        "positionRatio": "48.28%",
-        "pnl": "+¥8,469.00",
-        "pnlRate": "+0.85%",
+        "totalAssets": "¥1,017,538.00",
+        "cash": "¥439,278.00",
+        "positionValue": "¥578,260.00",
+        "cashRatio": "43.17%",
+        "positionRatio": "56.83%",
+        "pnl": "+¥17,538.00",
+        "pnlRate": "+1.75%",
         "holdings": [
-          "000333 美的集团：2,500 股，成本价 ¥77.30，最新价 ¥74.32，持仓市值 ¥185,800.00，占比 18.42%，浮盈亏 ¥-7,450.00",
-          "300750 宁德时代：400 股，成本价 ¥400.00，最新价 ¥402.50，持仓市值 ¥161,000.00，占比 15.96%，浮盈亏 +¥1,000.00",
-          "600519 贵州茅台：100 股，成本价 ¥1400.00，最新价 ¥1401.18，持仓市值 ¥140,118.00，占比 13.89%，浮盈亏 +¥118.00"
+          "000333 美的集团：2,500 股，成本价 ¥77.30，最新价 ¥74.78，持仓市值 ¥186,950.00，占比 18.37%，浮盈亏 ¥-6,300.00",
+          "300750 宁德时代：600 股，成本价 ¥403.79，最新价 ¥416.18，持仓市值 ¥249,708.00，占比 24.54%，浮盈亏 +¥7,436.00",
+          "600519 贵州茅台：100 股，成本价 ¥1400.00，最新价 ¥1416.02，持仓市值 ¥141,602.00，占比 13.92%，浮盈亏 +¥1,602.00"
         ]
       },
       "stats": {
-        "buys": 6,
+        "buys": 8,
         "sells": 5,
-        "lastTrade": "2026-03-26 SELL"
+        "lastTrade": "2026-03-27 BUY"
       },
       "trades": [
         {
@@ -204,6 +204,36 @@ window.__TRADING_DASHBOARD__ = {
           "ruleTag": "主动减仓",
           "actionType": "防守",
           "compliant": "是"
+        },
+        {
+          "date": "2026-03-27",
+          "action": "BUY",
+          "ticker": "300750",
+          "name": "宁德时代",
+          "price": "407.73",
+          "shares": "100",
+          "amount": "40773",
+          "reason": "Broad A-share tape is modestly positive intraday with Shanghai/Shenzhen/ChiNext around +0.10%/+0.35%/+0.27% and CATL leading the portfolio's growth sleeve at about +1.3%; add back one tactical lot while keeping cash just under half for flexibility",
+          "cash_after": "480778",
+          "position_ratio_after": "52.52%",
+          "ruleTag": "趋势加仓",
+          "actionType": "进攻",
+          "compliant": "是"
+        },
+        {
+          "date": "2026-03-27",
+          "action": "BUY",
+          "ticker": "300750",
+          "name": "宁德时代",
+          "price": "415.00",
+          "shares": "100",
+          "amount": "41500",
+          "reason": "By late morning Shanghai/Shenzhen/ChiNext strengthen further to about +0.26%/+0.93%/+0.83% with CATL extending to about +3.1%; add one more tactical lot on index-growth resonance while still keeping overall exposure below 60%",
+          "cash_after": "439278",
+          "position_ratio_after": "56.72%",
+          "ruleTag": "趋势加仓",
+          "actionType": "进攻",
+          "compliant": "是"
         }
       ],
       "reports": [
@@ -373,6 +403,16 @@ window.__TRADING_DASHBOARD__ = {
           "dayPnlRate": "-0.27%",
           "cumPnl": "+¥5,700",
           "cumPnlRate": "+0.57%"
+        },
+        {
+          "date": "2026-03-27",
+          "totalAssets": "¥1,017,538",
+          "cash": "¥439,278",
+          "positionValue": "¥578,260",
+          "dayPnl": "+¥11,838",
+          "dayPnlRate": "+1.18%",
+          "cumPnl": "+¥17,538",
+          "cumPnlRate": "+1.75%"
         }
       ],
       "pnlBreakdown": {
@@ -382,35 +422,35 @@ window.__TRADING_DASHBOARD__ = {
       "allocation": [
         {
           "label": "000333 美的集团",
-          "value": 18.42
+          "value": 18.37
         },
         {
           "label": "300750 宁德时代",
-          "value": 15.96
+          "value": 24.54
         },
         {
           "label": "600519 贵州茅台",
-          "value": 13.89
+          "value": 13.92
         },
         {
           "label": "现金",
-          "value": 51.72
+          "value": 43.17
         }
       ],
       "riskAlerts": [],
       "marketState": {
-        "score": 45,
-        "status": "中性",
-        "summary": "A股 当前判断：中性。最近信号分数 45/100，优先看板块联动和收盘确认。"
+        "score": 65,
+        "status": "偏强",
+        "summary": "A股 当前判断：偏强。最近信号分数 65/100，优先看板块联动和收盘确认。"
       },
       "holdingScores": [
         {
-          "label": "300750 宁德时代",
-          "score": 89,
+          "label": "600519 贵州茅台",
+          "score": 95,
           "action": "可加仓观察",
-          "ratio": 15.96,
-          "pnl": 1000,
-          "note": "300750 宁德时代：400 股，成本价 ¥400.00，最新价 ¥402.50，持仓市值 ¥161,000.00，占比 15.96%，浮盈亏 +¥1,000.00",
+          "ratio": 13.92,
+          "pnl": 1602,
+          "note": "600519 贵州茅台：100 股，成本价 ¥1400.00，最新价 ¥1416.02，持仓市值 ¥141,602.00，占比 13.92%，浮盈亏 +¥1,602.00",
           "signal": {
             "label": "绿灯",
             "color": "green"
@@ -418,35 +458,35 @@ window.__TRADING_DASHBOARD__ = {
           "breakdown": {
             "trend": 28,
             "position": 25,
-            "market": 16,
+            "market": 22,
             "risk": 20
           }
         },
         {
-          "label": "600519 贵州茅台",
-          "score": 89,
+          "label": "300750 宁德时代",
+          "score": 88,
           "action": "可加仓观察",
-          "ratio": 13.89,
-          "pnl": 118,
-          "note": "600519 贵州茅台：100 股，成本价 ¥1400.00，最新价 ¥1401.18，持仓市值 ¥140,118.00，占比 13.89%，浮盈亏 +¥118.00",
+          "ratio": 24.54,
+          "pnl": 7436,
+          "note": "300750 宁德时代：600 股，成本价 ¥403.79，最新价 ¥416.18，持仓市值 ¥249,708.00，占比 24.54%，浮盈亏 +¥7,436.00",
           "signal": {
             "label": "绿灯",
             "color": "green"
           },
           "breakdown": {
             "trend": 28,
-            "position": 25,
-            "market": 16,
+            "position": 18,
+            "market": 22,
             "risk": 20
           }
         },
         {
           "label": "000333 美的集团",
-          "score": 66,
+          "score": 72,
           "action": "继续持有",
-          "ratio": 18.42,
-          "pnl": -7450,
-          "note": "000333 美的集团：2,500 股，成本价 ¥77.30，最新价 ¥74.32，持仓市值 ¥185,800.00，占比 18.42%，浮盈亏 ¥-7,450.00",
+          "ratio": 18.37,
+          "pnl": -6300,
+          "note": "000333 美的集团：2,500 股，成本价 ¥77.30，最新价 ¥74.78，持仓市值 ¥186,950.00，占比 18.37%，浮盈亏 ¥-6,300.00",
           "signal": {
             "label": "黄灯",
             "color": "amber"
@@ -454,15 +494,15 @@ window.__TRADING_DASHBOARD__ = {
           "breakdown": {
             "trend": 12,
             "position": 18,
-            "market": 16,
+            "market": 22,
             "risk": 20
           }
         }
       ],
       "actionPlan": {
-        "action": "继续持有",
-        "reason": "当前组合没有出现需要立刻大幅调整的信号。",
-        "execution": "今天组合承压，优先看是否需要继续降波动。"
+        "action": "可择机加仓",
+        "reason": "市场状态转暖且现金充足，可以等更强确认后加仓。",
+        "execution": "今天组合表现没有恶化，可继续按规则观察。"
       },
       "ruleCard": [
         "收盘站上 5 日线 / 10 日线，再考虑加仓。",
@@ -472,9 +512,9 @@ window.__TRADING_DASHBOARD__ = {
       ],
       "dailyBrief": {
         "title": "A股 半量化简报",
-        "summary": "中性｜建议：继续持有｜单日 -¥2,769。",
-        "focus": "当前相对最强关注：300750 宁德时代（89/100，可加仓观察）。",
-        "next": "先守纪律，优先观察环境变化和仓位安全。"
+        "summary": "偏强｜建议：可择机加仓｜单日 +¥11,838。",
+        "focus": "当前相对最强关注：600519 贵州茅台（95/100，可加仓观察）。",
+        "next": "等更强确认后再动，不提前抢跑。"
       }
     },
     "us": {
