@@ -1,5 +1,5 @@
 window.__TRADING_DASHBOARD__ = {
-  "updatedAt": "2026-03-27, 12:02:33",
+  "updatedAt": "2026-03-27, 12:12:17",
   "markets": {
     "aShare": {
       "label": "A股",
@@ -238,56 +238,61 @@ window.__TRADING_DASHBOARD__ = {
       ],
       "reports": [
         {
+          "date": "2026-03-27",
+          "name": "a-share-daily-report-2026-03-27.pdf",
+          "path": "reports/a-share-daily-report-2026-03-27.pdf",
+          "updatedAt": "2026-03-27, 12:02:34"
+        },
+        {
+          "date": "2026-03-26",
           "name": "a-share-daily-report-2026-03-26.pdf",
           "path": "reports/a-share-daily-report-2026-03-26.pdf",
           "updatedAt": "2026-03-26, 12:18:09"
         },
         {
+          "date": "2026-03-25",
           "name": "a-share-daily-report-2026-03-25.pdf",
           "path": "reports/a-share-daily-report-2026-03-25.pdf",
           "updatedAt": "2026-03-26, 12:18:09"
         },
         {
-          "name": "a-share-daily-report-2026-03-24.pdf",
-          "path": "reports/a-share-daily-report-2026-03-24.pdf",
-          "updatedAt": "2026-03-24, 03:12:25"
-        },
-        {
+          "date": "2026-03-23",
           "name": "a-share-daily-report-2026-03-23.pdf",
           "path": "reports/a-share-daily-report-2026-03-23.pdf",
           "updatedAt": "2026-03-24, 11:20:52"
         },
         {
+          "date": "2026-03-20",
           "name": "a-share-daily-report-2026-03-20.pdf",
           "path": "reports/a-share-daily-report-2026-03-20.pdf",
           "updatedAt": "2026-03-20, 10:34:36"
         },
         {
+          "date": "2026-03-19",
           "name": "a-share-daily-report-2026-03-19.pdf",
           "path": "reports/a-share-daily-report-2026-03-19.pdf",
           "updatedAt": "2026-03-19, 11:06:25"
         },
         {
+          "date": "2026-03-18",
           "name": "a-share-daily-report-2026-03-18.pdf",
           "path": "reports/a-share-daily-report-2026-03-18.pdf",
           "updatedAt": "2026-03-18, 14:24:09"
         },
         {
-          "name": "a-share-daily-report-2026-03-17.pdf",
-          "path": "reports/a-share-daily-report-2026-03-17.pdf",
-          "updatedAt": "2026-03-17, 03:11:24"
-        },
-        {
+          "date": "2026-03-16",
           "name": "a-share-daily-report-2026-03-16.pdf",
           "path": "reports/a-share-daily-report-2026-03-16.pdf",
           "updatedAt": "2026-03-16, 11:35:33"
         },
         {
+          "date": "2026-03-13",
           "name": "a-share-daily-report-2026-03-13.pdf",
           "path": "reports/a-share-daily-report-2026-03-13.pdf",
           "updatedAt": "2026-03-13, 03:13:20"
         },
         {
+          "date": "2026-03-12",
           "name": "a-share-daily-report-2026-03-12.pdf",
           "path": "reports/a-share-daily-report-2026-03-12.pdf",
           "updatedAt": "2026-03-12, 10:34:23"
@@ -297,8 +302,8 @@ window.__TRADING_DASHBOARD__ = {
         {
           "date": "2026-03-12",
           "totalAssets": "¥995,130",
-          "cash": "¥357,905",
           "positionValue": "¥637,225",
+          "cash": "¥357,905",
           "dayPnl": "-¥4,870",
           "dayPnlRate": "-0.49%",
           "cumPnl": "-¥4,870",
@@ -307,8 +312,8 @@ window.__TRADING_DASHBOARD__ = {
         {
           "date": "2026-03-13",
           "totalAssets": "¥999,724",
-          "cash": "¥357,905",
           "positionValue": "¥641,819",
+          "cash": "¥357,905",
           "dayPnl": "+¥4,594",
           "dayPnlRate": "+0.46%",
           "cumPnl": "-¥276",
@@ -317,28 +322,18 @@ window.__TRADING_DASHBOARD__ = {
         {
           "date": "2026-03-16",
           "totalAssets": "¥1,015,813",
-          "cash": "¥317,065",
           "positionValue": "¥698,748",
+          "cash": "¥317,065",
           "dayPnl": "+¥16,089",
           "dayPnlRate": "+1.61%",
           "cumPnl": "+¥15,813",
           "cumPnlRate": "+1.58%"
         },
         {
-          "date": "2026-03-17",
-          "totalAssets": "¥1,014,600",
-          "cash": "¥357,556",
-          "positionValue": "¥657,044",
-          "dayPnl": "-¥1,213",
-          "dayPnlRate": "-0.12%",
-          "cumPnl": "+¥14,600",
-          "cumPnlRate": "+1.46%"
-        },
-        {
           "date": "2026-03-18",
           "totalAssets": "¥1,010,429",
-          "cash": "¥357,556",
           "positionValue": "¥652,873",
+          "cash": "¥357,556",
           "dayPnl": "-¥4,171",
           "dayPnlRate": "-0.41%",
           "cumPnl": "+¥10,429",
@@ -346,78 +341,68 @@ window.__TRADING_DASHBOARD__ = {
         },
         {
           "date": "2026-03-19",
-          "totalAssets": "¥1,006,508",
-          "cash": "¥357,556",
-          "positionValue": "¥648,952",
-          "dayPnl": "-¥3,921",
+          "totalAssets": "¥1,006,508.00",
+          "positionValue": "¥648,952.00",
+          "cash": "¥357,556.00",
+          "dayPnl": "-¥3,921.00",
           "dayPnlRate": "-0.39%",
-          "cumPnl": "+¥6,508",
+          "cumPnl": "+¥6,508.00",
           "cumPnlRate": "+0.65%"
         },
         {
           "date": "2026-03-20",
-          "totalAssets": "¥1,009,601",
-          "cash": "¥357,556",
-          "positionValue": "¥652,045",
-          "dayPnl": "+¥3,093",
+          "totalAssets": "¥1,009,601.00",
+          "positionValue": "¥652,045.00",
+          "cash": "¥357,556.00",
+          "dayPnl": "+¥3,093.00",
           "dayPnlRate": "+0.31%",
-          "cumPnl": "+¥9,601",
+          "cumPnl": "+¥9,601.00",
           "cumPnlRate": "+0.96%"
         },
         {
           "date": "2026-03-23",
           "totalAssets": "¥1,005,624",
-          "cash": "¥520,596",
           "positionValue": "¥485,028",
+          "cash": "¥520,596",
           "dayPnl": "-¥3,977",
           "dayPnlRate": "-0.40%",
           "cumPnl": "+¥5,624",
           "cumPnlRate": "+0.56%"
         },
         {
-          "date": "2026-03-24",
-          "totalAssets": "¥1,005,700",
-          "cash": "¥520,596",
-          "positionValue": "¥485,104",
-          "dayPnl": "+¥76",
-          "dayPnlRate": "+0.01%",
-          "cumPnl": "+¥5,700",
-          "cumPnlRate": "+0.57%"
-        },
-        {
           "date": "2026-03-25",
-          "totalAssets": "¥1,008,469",
-          "cash": "¥521,551",
-          "positionValue": "¥486,918",
-          "dayPnl": "+¥2,769",
+          "totalAssets": "¥1,008,469.00",
+          "positionValue": "¥486,918.00",
+          "cash": "¥521,551.00",
+          "dayPnl": "+¥2,769.00",
           "dayPnlRate": "+0.28%",
-          "cumPnl": "+¥8,469",
+          "cumPnl": "+¥8,469.00",
           "cumPnlRate": "+0.85%"
         },
         {
           "date": "2026-03-26",
-          "totalAssets": "¥1,005,700",
-          "cash": "¥520,596",
-          "positionValue": "¥485,104",
-          "dayPnl": "-¥2,769",
+          "totalAssets": "¥1,005,700.00",
+          "positionValue": "¥485,104.00",
+          "cash": "¥520,596.00",
+          "dayPnl": "-¥2,769.00",
           "dayPnlRate": "-0.27%",
-          "cumPnl": "+¥5,700",
+          "cumPnl": "+¥5,700.00",
           "cumPnlRate": "+0.57%"
         },
         {
           "date": "2026-03-27",
-          "totalAssets": "¥1,017,538",
-          "cash": "¥439,278",
-          "positionValue": "¥578,260",
-          "dayPnl": "+¥11,838",
+          "totalAssets": "¥1,017,538.00",
+          "positionValue": "¥578,260.00",
+          "cash": "¥439,278.00",
+          "dayPnl": "+¥11,838.00",
           "dayPnlRate": "+1.18%",
-          "cumPnl": "+¥17,538",
+          "cumPnl": "+¥17,538.00",
           "cumPnlRate": "+1.75%"
         }
       ],
       "pnlBreakdown": {
-        "realized": 0,
-        "unrealized": 15813
+        "realized": 15105.8,
+        "unrealized": 2738
       },
       "allocation": [
         {
@@ -512,9 +497,24 @@ window.__TRADING_DASHBOARD__ = {
       ],
       "dailyBrief": {
         "title": "A股 半量化简报",
-        "summary": "偏强｜建议：可择机加仓｜单日 +¥11,838。",
+        "summary": "偏强｜建议：可择机加仓｜单日 +¥11,838.00。",
         "focus": "当前相对最强关注：600519 贵州茅台（95/100，可加仓观察）。",
         "next": "等更强确认后再动，不提前抢跑。"
+      },
+      "integrity": {
+        "ledgerDate": "2026-03-27",
+        "latestReportDate": "2026-03-27",
+        "latestReportFiles": {
+          "md": "a-share-daily-report-2026-03-27.md",
+          "html": "a-share-daily-report-2026-03-27.html",
+          "pdf": "a-share-daily-report-2026-03-27.pdf"
+        },
+        "latestSnapshotDate": "2026-03-27",
+        "latestReportComplete": true,
+        "skippedIncompleteHistoricalDates": [
+          "2026-03-17",
+          "2026-03-24"
+        ]
       }
     },
     "us": {
@@ -843,61 +843,55 @@ window.__TRADING_DASHBOARD__ = {
       ],
       "reports": [
         {
+          "date": "2026-03-26",
           "name": "us-daily-report-2026-03-26-final.pdf",
           "path": "reports/us-daily-report-2026-03-26-final.pdf",
           "updatedAt": "2026-03-26, 16:16:46"
         },
         {
+          "date": "2026-03-25",
           "name": "us-daily-report-2026-03-25-final.pdf",
           "path": "reports/us-daily-report-2026-03-25-final.pdf",
           "updatedAt": "2026-03-26, 12:27:12"
         },
         {
+          "date": "2026-03-24",
           "name": "us-daily-report-2026-03-24-final.pdf",
           "path": "reports/us-daily-report-2026-03-24-final.pdf",
           "updatedAt": "2026-03-24, 16:16:01"
         },
         {
+          "date": "2026-03-23",
           "name": "us-daily-report-2026-03-23-final.pdf",
           "path": "reports/us-daily-report-2026-03-23-final.pdf",
           "updatedAt": "2026-03-24, 11:20:51"
         },
         {
+          "date": "2026-03-20",
           "name": "us-daily-report-2026-03-20-final.pdf",
           "path": "reports/us-daily-report-2026-03-20-final.pdf",
           "updatedAt": "2026-03-20, 23:31:37"
         },
         {
+          "date": "2026-03-19",
           "name": "us-daily-report-2026-03-19-final.pdf",
           "path": "reports/us-daily-report-2026-03-19-final.pdf",
           "updatedAt": "2026-03-20, 10:31:14"
         },
         {
+          "date": "2026-03-18",
           "name": "us-daily-report-2026-03-18-final.pdf",
           "path": "reports/us-daily-report-2026-03-18-final.pdf",
           "updatedAt": "2026-03-19, 11:09:50"
         },
         {
-          "name": "us-daily-report-2026-03-17-final.pdf",
-          "path": "reports/us-daily-report-2026-03-17-final.pdf",
-          "updatedAt": "2026-03-17, 16:12:57"
-        },
-        {
+          "date": "2026-03-16",
           "name": "us-daily-report-2026-03-16-final.pdf",
           "path": "reports/us-daily-report-2026-03-16-final.pdf",
           "updatedAt": "2026-03-16, 17:05:59"
         },
         {
-          "name": "us-daily-report-2026-03-13-final.pdf",
-          "path": "reports/us-daily-report-2026-03-13-final.pdf",
-          "updatedAt": "2026-03-13, 16:12:33"
-        },
-        {
-          "name": "us-daily-report-2026-03-12.pdf",
-          "path": "reports/us-daily-report-2026-03-12.pdf",
-          "updatedAt": "2026-03-12, 17:30:46"
-        },
-        {
+          "date": "2026-03-12",
           "name": "us-daily-report-2026-03-12-final.pdf",
           "path": "reports/us-daily-report-2026-03-12-final.pdf",
           "updatedAt": "2026-03-12, 17:39:01"
@@ -907,48 +901,28 @@ window.__TRADING_DASHBOARD__ = {
         {
           "date": "2026-03-12",
           "totalAssets": "$10,022.63",
-          "cash": "$3,196.48",
           "positionValue": "$6,826.15",
+          "cash": "$3,196.48",
           "dayPnl": "+$22.63",
           "dayPnlRate": "+0.23%",
           "cumPnl": "+$22.63",
           "cumPnlRate": "+0.23%"
         },
         {
-          "date": "2026-03-13",
-          "totalAssets": "$9,911.46",
-          "cash": "$3,196.48",
-          "positionValue": "$6,714.98",
-          "dayPnl": "-$111.17",
-          "dayPnlRate": "-1.11%",
-          "cumPnl": "-$88.54",
-          "cumPnlRate": "-0.89%"
-        },
-        {
           "date": "2026-03-16",
           "totalAssets": "$9,993.48",
-          "cash": "$1,929.73",
           "positionValue": "$8,063.75",
+          "cash": "$1,929.73",
           "dayPnl": "+$82.02",
           "dayPnlRate": "+0.83%",
           "cumPnl": "-$6.52",
           "cumPnlRate": "-0.07%"
         },
         {
-          "date": "2026-03-17",
-          "totalAssets": "$10,026.83",
-          "cash": "$1,929.73",
-          "positionValue": "$8,097.10",
-          "dayPnl": "+$33.35",
-          "dayPnlRate": "+0.33%",
-          "cumPnl": "+$26.83",
-          "cumPnlRate": "+0.27%"
-        },
-        {
           "date": "2026-03-18",
           "totalAssets": "$9,919.83",
-          "cash": "$1,929.73",
           "positionValue": "$7,990.10",
+          "cash": "$1,929.73",
           "dayPnl": "-$107.00",
           "dayPnlRate": "-1.07%",
           "cumPnl": "-$80.17",
@@ -957,8 +931,8 @@ window.__TRADING_DASHBOARD__ = {
         {
           "date": "2026-03-19",
           "totalAssets": "$9,871.63",
-          "cash": "$4,060.78",
           "positionValue": "$5,810.85",
+          "cash": "$4,060.78",
           "dayPnl": "-$48.20",
           "dayPnlRate": "-0.49%",
           "cumPnl": "-$128.37",
@@ -967,8 +941,8 @@ window.__TRADING_DASHBOARD__ = {
         {
           "date": "2026-03-20",
           "totalAssets": "$9,778.56",
-          "cash": "$6,434.01",
           "positionValue": "$3,344.55",
+          "cash": "$6,434.01",
           "dayPnl": "-$93.07",
           "dayPnlRate": "-0.94%",
           "cumPnl": "-$221.44",
@@ -977,8 +951,8 @@ window.__TRADING_DASHBOARD__ = {
         {
           "date": "2026-03-23",
           "totalAssets": "$199,778.91",
-          "cash": "$183,539.71",
           "positionValue": "$16,239.20",
+          "cash": "$183,539.71",
           "dayPnl": "+$0.35",
           "dayPnlRate": "+0.00%",
           "cumPnl": "-$221.09",
@@ -986,19 +960,19 @@ window.__TRADING_DASHBOARD__ = {
         },
         {
           "date": "2026-03-24",
-          "totalAssets": "$199,778.91",
+          "totalAssets": "$199,737.31",
+          "positionValue": "$16,197.60",
           "cash": "$183,539.71",
-          "positionValue": "$16,239.20",
-          "dayPnl": "$0.00",
-          "dayPnlRate": "0.00%",
-          "cumPnl": "-$221.09",
-          "cumPnlRate": "-0.11%"
+          "dayPnl": "-$41.60",
+          "dayPnlRate": "-0.02%",
+          "cumPnl": "-$262.69",
+          "cumPnlRate": "-0.13%"
         },
         {
           "date": "2026-03-25",
           "totalAssets": "$199,872.71",
-          "cash": "$179,201.11",
           "positionValue": "$20,671.60",
+          "cash": "$179,201.11",
           "dayPnl": "+$93.80",
           "dayPnlRate": "+0.05%",
           "cumPnl": "-$127.29",
@@ -1007,8 +981,8 @@ window.__TRADING_DASHBOARD__ = {
         {
           "date": "2026-03-26",
           "totalAssets": "$199,573.41",
-          "cash": "$182,646.91",
           "positionValue": "$16,926.50",
+          "cash": "$182,646.91",
           "dayPnl": "-$299.30",
           "dayPnlRate": "-0.15%",
           "cumPnl": "-$426.59",
@@ -1016,8 +990,8 @@ window.__TRADING_DASHBOARD__ = {
         }
       ],
       "pnlBreakdown": {
-        "realized": -2.72,
-        "unrealized": -3.75
+        "realized": -236.28,
+        "unrealized": -193.75
       },
       "allocation": [
         {
@@ -1033,16 +1007,21 @@ window.__TRADING_DASHBOARD__ = {
           "value": 91.52
         }
       ],
-      "riskAlerts": [],
+      "riskAlerts": [
+        {
+          "level": "info",
+          "text": "最近 3 个快照里出现了 2 次以上单日回撤，注意节奏。"
+        }
+      ],
       "marketState": {
-        "score": 45,
-        "status": "中性",
-        "summary": "美股 当前判断：中性。最近信号分数 45/100，优先看指数、波动率和科技权重共振。"
+        "score": 35,
+        "status": "偏弱",
+        "summary": "美股 当前判断：偏弱。最近信号分数 35/100，优先看指数、波动率和科技权重共振。"
       },
       "holdingScores": [
         {
           "label": "NVDA NVIDIA",
-          "score": 73,
+          "score": 65,
           "action": "继续持有",
           "ratio": 2.15,
           "pnl": -185.5,
@@ -1054,13 +1033,13 @@ window.__TRADING_DASHBOARD__ = {
           "breakdown": {
             "trend": 12,
             "position": 25,
-            "market": 16,
+            "market": 8,
             "risk": 20
           }
         },
         {
           "label": "AAPL Apple",
-          "score": 73,
+          "score": 65,
           "action": "继续持有",
           "ratio": 6.33,
           "pnl": -8.25,
@@ -1072,14 +1051,14 @@ window.__TRADING_DASHBOARD__ = {
           "breakdown": {
             "trend": 12,
             "position": 25,
-            "market": 16,
+            "market": 8,
             "risk": 20
           }
         }
       ],
       "actionPlan": {
-        "action": "继续持有",
-        "reason": "当前组合没有出现需要立刻大幅调整的信号。",
+        "action": "偏防守",
+        "reason": "最近回撤偏多，先保现金和节奏，不急着扩仓。",
         "execution": "今天组合承压，优先看是否需要继续降波动。"
       },
       "ruleCard": [
@@ -1090,9 +1069,24 @@ window.__TRADING_DASHBOARD__ = {
       ],
       "dailyBrief": {
         "title": "美股 半量化简报",
-        "summary": "中性｜建议：继续持有｜单日 -$299.30。",
-        "focus": "当前相对最强关注：NVDA NVIDIA（73/100，继续持有）。",
+        "summary": "偏弱｜建议：偏防守｜单日 -$299.30。",
+        "focus": "当前相对最强关注：NVDA NVIDIA（65/100，继续持有）。",
         "next": "先守纪律，优先观察环境变化和仓位安全。"
+      },
+      "integrity": {
+        "ledgerDate": "2026-03-26",
+        "latestReportDate": "2026-03-26",
+        "latestReportFiles": {
+          "md": "us-daily-report-2026-03-26-final.md",
+          "html": "us-daily-report-2026-03-26-final.html",
+          "pdf": "us-daily-report-2026-03-26-final.pdf"
+        },
+        "latestSnapshotDate": "2026-03-26",
+        "latestReportComplete": true,
+        "skippedIncompleteHistoricalDates": [
+          "2026-03-13",
+          "2026-03-17"
+        ]
       }
     }
   }
